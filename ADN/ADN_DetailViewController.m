@@ -6,9 +6,11 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "ADN_DetailViewController.h"
 
-@implementation DetailViewController
+@implementation ADN_DetailViewController
+
+@synthesize details;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

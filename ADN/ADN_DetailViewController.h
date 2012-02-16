@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@interface ADN_DetailViewController : UIViewController
+{
+    NSDictionary* details;
+}
+
+@property (nonatomic, retain) NSDictionary* details;
 
 @end
