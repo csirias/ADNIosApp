@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E0A38DC14ED6655009D3245 /* ADN_NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A38DA14ED6655009D3245 /* ADN_NewsViewController.m */; };
 		4E0A38E114ED7E51009D3245 /* actualidad.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A38E014ED7E51009D3245 /* actualidad.json */; };
+		4E0A38E714ED9E1F009D3245 /* ADN_DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A38E614ED9E1F009D3245 /* ADN_DetailViewController.m */; };
 		4EF9827E14ED4FC7003108E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9827D14ED4FC7003108E1 /* UIKit.framework */; };
 		4EF9828014ED4FC7003108E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9827F14ED4FC7003108E1 /* Foundation.framework */; };
 		4EF9828214ED4FC7003108E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9828114ED4FC7003108E1 /* CoreGraphics.framework */; };
@@ -40,6 +41,8 @@
 		4E0A38D914ED6655009D3245 /* ADN_NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADN_NewsViewController.h; sourceTree = "<group>"; };
 		4E0A38DA14ED6655009D3245 /* ADN_NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADN_NewsViewController.m; sourceTree = "<group>"; };
 		4E0A38E014ED7E51009D3245 /* actualidad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = actualidad.json; sourceTree = "<group>"; };
+		4E0A38E514ED9E1F009D3245 /* ADN_DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADN_DetailViewController.h; sourceTree = "<group>"; };
+		4E0A38E614ED9E1F009D3245 /* ADN_DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADN_DetailViewController.m; sourceTree = "<group>"; };
 		4EF9827914ED4FC7003108E1 /* ADN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF9827D14ED4FC7003108E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EF9827F14ED4FC7003108E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -136,6 +139,8 @@
 				4EF9829614ED4FC7003108E1 /* ADN_ViewController.m */,
 				4E0A38D914ED6655009D3245 /* ADN_NewsViewController.h */,
 				4E0A38DA14ED6655009D3245 /* ADN_NewsViewController.m */,
+				4E0A38E514ED9E1F009D3245 /* ADN_DetailViewController.h */,
+				4E0A38E614ED9E1F009D3245 /* ADN_DetailViewController.m */,
 				4EF9828414ED4FC7003108E1 /* Supporting Files */,
 			);
 			path = ADN;
@@ -302,6 +307,7 @@
 				4EF9828E14ED4FC7003108E1 /* ADN_AppDelegate.m in Sources */,
 				4EF9829714ED4FC7003108E1 /* ADN_ViewController.m in Sources */,
 				4E0A38DC14ED6655009D3245 /* ADN_NewsViewController.m in Sources */,
+				4E0A38E714ED9E1F009D3245 /* ADN_DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

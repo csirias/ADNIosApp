@@ -62,11 +62,6 @@
     }
 }
 
-- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
-{
-    
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     [[[segue destinationViewController] navigationItem] setTitle:[segue identifier]];

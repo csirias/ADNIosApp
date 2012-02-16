@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#define kNewsCellImageViewTag   3000
+#define kNewsCellTitleTag       3001
+#define kNewsCellDescriptionTag 3002
+#define kNewsCellDateTag        3003
+
 @interface ADN_NewsViewController : UIViewController
 {
     UITableView* tableView;

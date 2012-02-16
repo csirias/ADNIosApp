@@ -56,6 +56,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:FALSE animated:NO];
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    [self.tableView deselectRowAtIndexPath:selectedIndexPath animated:YES];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -86,17 +88,39 @@
     static NSString* kNewsCellIdentifier = @"newsCell";
     UITableViewCell* cell = [tv dequeueReusableCellWithIdentifier:kNewsCellIdentifier];
     NSDictionary* dict = [self.details objectAtIndex:indexPath.row];
-    UILabel* titleLabel = (UILabel*)[cell viewWithTag:3001];
+
+    UILabel* titleLabel = (UILabel*)[cell viewWithTag:kNewsCellTitleTag];
     titleLabel.text = [dict objectForKey:@"title"];
-    UIImageView* iv = (UIImageView*)[cell viewWithTag:3000];
+
+    UIImageView* iv = (UIImageView*)[cell viewWithTag:kNewsCellImageViewTag];
     iv.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"adn_logo" ofType:@"png"]];
-    UILabel* descLabel = (UILabel*)[cell viewWithTag:3002];
+
+    UILabel* descLabel = (UILabel*)[cell viewWithTag:kNewsCellDescriptionTag];
     descLabel.text = [dict objectForKey:@"desc"];
+
+    UILabel* dateLabel = (UILabel*)[cell viewWithTag:kNewsCellDateTag];
+    NSDateFormatter* f = [[NSDateFormatter alloc] init];
+    [f setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
+    [f setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
+    NSDate* date = [f dateFromString:[dict objectForKey:@"date"]];
+    [f setDateFormat:@"h':'mm a' - 'dd/MM/yyyy"];
+    [f setTimeZone:[NSTimeZone localTimeZone]];
+    dateLabel.text = [f stringFromDate:date];
     
     return cell;
 }
 
+#pragma mark - Segues
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"sender = %@", sender);
+    //[[[segue destinationViewController] navigationItem] setTitle:[segue identifier]];
+}
+
 #pragma mark - Dealing with JSON
+
+#pragma mark -    REFACTOR THIS INTO ITS OWN MODEL
 
 - (void)loadJSON:(NSError**)error
 {
@@ -113,7 +137,7 @@
 
     [self loadJSON:&error];
     if(error)
-        return NULL;
+        return [NSArray array]; // This should do something more constructive
 
     return details;
 }
