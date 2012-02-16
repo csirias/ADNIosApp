@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0A38DC14ED6655009D3245 /* ADN_NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A38DA14ED6655009D3245 /* ADN_NewsViewController.m */; };
+		4E0A38E114ED7E51009D3245 /* actualidad.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A38E014ED7E51009D3245 /* actualidad.json */; };
 		4EF9827E14ED4FC7003108E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9827D14ED4FC7003108E1 /* UIKit.framework */; };
 		4EF9828014ED4FC7003108E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9827F14ED4FC7003108E1 /* Foundation.framework */; };
 		4EF9828214ED4FC7003108E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9828114ED4FC7003108E1 /* CoreGraphics.framework */; };
@@ -21,6 +23,7 @@
 		4EF982A114ED4FC7003108E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9827F14ED4FC7003108E1 /* Foundation.framework */; };
 		4EF982A914ED4FC7003108E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EF982A714ED4FC7003108E1 /* InfoPlist.strings */; };
 		4EF982AC14ED4FC7003108E1 /* ADNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982AB14ED4FC7003108E1 /* ADNTests.m */; };
+		4EF982B814ED5CA7003108E1 /* adn_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF982B714ED5CA7003108E1 /* adn_logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,26 +37,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E0A38D914ED6655009D3245 /* ADN_NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADN_NewsViewController.h; sourceTree = "<group>"; };
+		4E0A38DA14ED6655009D3245 /* ADN_NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADN_NewsViewController.m; sourceTree = "<group>"; };
+		4E0A38E014ED7E51009D3245 /* actualidad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = actualidad.json; sourceTree = "<group>"; };
 		4EF9827914ED4FC7003108E1 /* ADN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF9827D14ED4FC7003108E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EF9827F14ED4FC7003108E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4EF9828114ED4FC7003108E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4EF9828514ED4FC7003108E1 /* ADN-Info.plist */ = {isa = PBXFileReference; path = "ADN-Info.plist"; sourceTree = "<group>"; };
+		4EF9828514ED4FC7003108E1 /* ADN-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ADN-Info.plist"; sourceTree = "<group>"; };
 		4EF9828714ED4FC7003108E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EF9828914ED4FC7003108E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4EF9828B14ED4FC7003108E1 /* ADN-Prefix.pch */ = {isa = PBXFileReference; path = "ADN-Prefix.pch"; sourceTree = "<group>"; };
-		4EF9828C14ED4FC7003108E1 /* ADN_AppDelegate.h */ = {isa = PBXFileReference; path = ADN_AppDelegate.h; sourceTree = "<group>"; };
+		4EF9828B14ED4FC7003108E1 /* ADN-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ADN-Prefix.pch"; sourceTree = "<group>"; };
+		4EF9828C14ED4FC7003108E1 /* ADN_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADN_AppDelegate.h; sourceTree = "<group>"; };
 		4EF9828D14ED4FC7003108E1 /* ADN_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADN_AppDelegate.m; sourceTree = "<group>"; };
 		4EF9829014ED4FC7003108E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		4EF9829314ED4FC7003108E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		4EF9829514ED4FC7003108E1 /* ADN_ViewController.h */ = {isa = PBXFileReference; path = ADN_ViewController.h; sourceTree = "<group>"; };
+		4EF9829514ED4FC7003108E1 /* ADN_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADN_ViewController.h; sourceTree = "<group>"; };
 		4EF9829614ED4FC7003108E1 /* ADN_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADN_ViewController.m; sourceTree = "<group>"; };
 		4EF9829D14ED4FC7003108E1 /* ADNTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF9829E14ED4FC7003108E1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		4EF982A614ED4FC7003108E1 /* ADNTests-Info.plist */ = {isa = PBXFileReference; path = "ADNTests-Info.plist"; sourceTree = "<group>"; };
+		4EF982A614ED4FC7003108E1 /* ADNTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ADNTests-Info.plist"; sourceTree = "<group>"; };
 		4EF982A814ED4FC7003108E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4EF982AA14ED4FC7003108E1 /* ADNTests.h */ = {isa = PBXFileReference; path = ADNTests.h; sourceTree = "<group>"; };
+		4EF982AA14ED4FC7003108E1 /* ADNTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADNTests.h; sourceTree = "<group>"; };
 		4EF982AB14ED4FC7003108E1 /* ADNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADNTests.m; sourceTree = "<group>"; };
+		4EF982B714ED5CA7003108E1 /* adn_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adn_logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E0A38DF14ED7BFD009D3245 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				4E0A38E014ED7E51009D3245 /* actualidad.json */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
 		4EF9826E14ED4FC7003108E1 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +134,8 @@
 				4EF9829214ED4FC7003108E1 /* MainStoryboard_iPad.storyboard */,
 				4EF9829514ED4FC7003108E1 /* ADN_ViewController.h */,
 				4EF9829614ED4FC7003108E1 /* ADN_ViewController.m */,
+				4E0A38D914ED6655009D3245 /* ADN_NewsViewController.h */,
+				4E0A38DA14ED6655009D3245 /* ADN_NewsViewController.m */,
 				4EF9828414ED4FC7003108E1 /* Supporting Files */,
 			);
 			path = ADN;
@@ -127,6 +144,7 @@
 		4EF9828414ED4FC7003108E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4EF982B514ED5C08003108E1 /* Assets */,
 				4EF9828514ED4FC7003108E1 /* ADN-Info.plist */,
 				4EF9828614ED4FC7003108E1 /* InfoPlist.strings */,
 				4EF9828914ED4FC7003108E1 /* main.m */,
@@ -152,6 +170,23 @@
 				4EF982A714ED4FC7003108E1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EF982B514ED5C08003108E1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4E0A38DF14ED7BFD009D3245 /* JSON */,
+				4EF982B614ED5C20003108E1 /* Images */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		4EF982B614ED5C20003108E1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4EF982B714ED5CA7003108E1 /* adn_logo.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +262,8 @@
 				4EF9828814ED4FC7003108E1 /* InfoPlist.strings in Resources */,
 				4EF9829114ED4FC7003108E1 /* MainStoryboard_iPhone.storyboard in Resources */,
 				4EF9829414ED4FC7003108E1 /* MainStoryboard_iPad.storyboard in Resources */,
+				4EF982B814ED5CA7003108E1 /* adn_logo.png in Resources */,
+				4E0A38E114ED7E51009D3245 /* actualidad.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +301,7 @@
 				4EF9828A14ED4FC7003108E1 /* main.m in Sources */,
 				4EF9828E14ED4FC7003108E1 /* ADN_AppDelegate.m in Sources */,
 				4EF9829714ED4FC7003108E1 /* ADN_ViewController.m in Sources */,
+				4E0A38DC14ED6655009D3245 /* ADN_NewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +481,7 @@
 				4EF982B114ED4FC7003108E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EF982B214ED4FC7003108E1 /* Build configuration list for PBXNativeTarget "ADNTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +490,7 @@
 				4EF982B414ED4FC7003108E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
