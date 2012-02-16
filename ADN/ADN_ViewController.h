@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ADN_ViewController : UIViewController
+@interface ADN_ViewController : UIViewController <UINavigationControllerDelegate>
+
+- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender;
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
 @end

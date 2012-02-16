@@ -34,6 +34,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:TRUE animated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -59,6 +60,16 @@
     } else {
         return YES;
     }
+}
+
+- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
 }
 
 @end
