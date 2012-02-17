@@ -7,6 +7,7 @@
 //
 
 #import "ADN_NewsViewController.h"
+#import "ADN_DetailViewController.h"
 
 @interface ADN_NewsViewController ()
 @property (nonatomic, readonly, retain) NSArray* details;
@@ -55,15 +56,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:FALSE animated:NO];
+    [self.navigationController setNavigationBarHidden:FALSE animated:YES];
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     [self.tableView deselectRowAtIndexPath:selectedIndexPath animated:YES];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation) || interfaceOrientation == UIInterfaceOrientationPortrait;
 }
 
 #pragma mark - TableView
@@ -114,8 +114,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"sender = %@", sender);
-    //[[[segue destinationViewController] navigationItem] setTitle:[segue identifier]];
+    NSIndexPath* selectedRowIndex = [self.tableView indexPathForSelectedRow];
+    NSDictionary* d = [details objectAtIndex:selectedRowIndex.row];
+    ADN_DetailViewController* detailVC = [segue destinationViewController];
+    [[detailVC navigationItem] setTitle:[d objectForKey:@"title"]];
+    [detailVC setDetails:d];
 }
 
 #pragma mark - Dealing with JSON

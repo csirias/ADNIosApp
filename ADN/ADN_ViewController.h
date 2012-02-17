@@ -10,6 +10,8 @@
 
 @interface ADN_ViewController : UIViewController <UINavigationControllerDelegate>
 
+@property (nonatomic, retain) IBOutlet UIScrollView* scrollView;
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
 @end

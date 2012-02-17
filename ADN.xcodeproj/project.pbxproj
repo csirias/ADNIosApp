@@ -239,7 +239,7 @@
 		4EF9827014ED4FC7003108E1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 4EF9827314ED4FC7003108E1 /* Build configuration list for PBXProject "ADN" */;
 			compatibilityVersion = "Xcode 3.2";

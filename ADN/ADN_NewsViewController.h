@@ -12,6 +12,7 @@
 #define kNewsCellTitleTag       3001
 #define kNewsCellDescriptionTag 3002
 #define kNewsCellDateTag        3003
+#define kNewsCellWebviewTag     3004
 
 @interface ADN_NewsViewController : UIViewController
 {

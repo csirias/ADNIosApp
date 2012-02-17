@@ -14,5 +14,6 @@
 }
 
 @property (nonatomic, retain) NSDictionary* details;
+@property (nonatomic, retain) IBOutlet UIScrollView* scrollView;
 
 @end
