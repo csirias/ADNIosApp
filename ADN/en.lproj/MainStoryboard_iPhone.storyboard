@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Pcd-M4-Jk6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2177" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Pcd-M4-Jk6">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1173"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
         <scene sceneID="Vvv-OY-d7W">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhg-EZ-LeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -106,6 +107,7 @@
             </objects>
             <point key="canvasLocation" x="797" y="86"/>
         </scene>
+        <!--News View Controller - Noticias-->
         <scene sceneID="vJY-X4-AAc">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IvN-4m-eIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -175,6 +177,7 @@
             </objects>
             <point key="canvasLocation" x="1362" y="86"/>
         </scene>
+        <!--Detail View Controller-->
         <scene sceneID="BG6-21-mfu">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ksb-cZ-CV7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,16 +188,16 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qx0-sD-6Tx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3001" contentMode="left" text="Title goes here" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" minimumFontSize="10" id="RUh-Cq-aY7">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3001" contentMode="left" text="Title goes here" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" id="RUh-Cq-aY7">
                                         <rect key="frame" x="6" y="20" width="308" height="27"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3003" contentMode="left" text="Date goes here" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="GqF-e5-cFY">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3003" contentMode="left" text="Date goes here" lineBreakMode="tailTruncation" minimumFontSize="10" id="GqF-e5-cFY">
                                         <rect key="frame" x="6" y="0.0" width="308" height="21"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -204,7 +207,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3004" contentMode="scaleToFill" scrollEnabled="NO" id="A6C-bQ-BSJ">
                                         <rect key="frame" x="0.0" y="55" width="320" height="361"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -224,6 +227,7 @@
             </objects>
             <point key="canvasLocation" x="1820" y="86"/>
         </scene>
+        <!--Navigation Controller-->
         <scene sceneID="vty-fR-c7N">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWZ-E9-C8M" userLabel="First Responder" sceneMemberID="firstResponder"/>

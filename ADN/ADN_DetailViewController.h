@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ADN_DetailViewController : UIViewController
+@interface ADN_DetailViewController : UIViewController <UIScrollViewDelegate>
 {
     NSDictionary* details;
+    CGPoint savedOffset;
 }
 
 @property (nonatomic, retain) NSDictionary* details;

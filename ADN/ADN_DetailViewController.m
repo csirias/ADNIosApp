@@ -67,6 +67,8 @@
     [f setTimeZone:[NSTimeZone localTimeZone]];
     dateLabel.text = [f stringFromDate:date];
 
+    savedOffset = CGPointZero;
+
     [self resizeSubviews];
 }
 
@@ -82,10 +84,23 @@
     return UIInterfaceOrientationIsLandscape(interfaceOrientation) || interfaceOrientation == UIInterfaceOrientationPortrait;
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     [self resizeSubviews];
-    [scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    self.scrollView.contentOffset = CGPointZero;
+}
+
+
+#pragma mark - ScrollView delegate
+
+
+- (void)scrollViewDidScroll:(UIScrollView*)sv
+{
+    savedOffset = sv.contentOffset;
 }
 
 
@@ -120,7 +135,6 @@
     frame.size.height = size.height + 8;
     frame.origin.y = dateLabel.frame.size.height + titleLabel.frame.size.height;
     [descTextView setFrame:frame];
-    NSLog(@"totalSize = %@", NSStringFromCGSize(totalSize));
     
     [self.scrollView setContentSize:totalSize];
 }
