@@ -14,7 +14,7 @@
     CGPoint savedOffset;
 }
 
-@property (nonatomic, retain) NSDictionary* details;
-@property (nonatomic, retain) IBOutlet UIScrollView* scrollView;
+@property (nonatomic, strong) NSDictionary* details;
+@property (nonatomic, strong) IBOutlet UIScrollView* scrollView;
 
 @end

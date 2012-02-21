@@ -7,19 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EasyTableView.h"
 
-#define kNewsCellImageViewTag   3000
-#define kNewsCellTitleTag       3001
-#define kNewsCellDescriptionTag 3002
-#define kNewsCellDateTag        3003
-#define kNewsCellWebviewTag     3004
+#define kNewsCellImageViewTag           3000
+#define kNewsCellTitleTag               3001
+#define kNewsCellDescriptionTag         3002
+#define kNewsCellDateTag                3003
+#define kNewsCellWebviewTag             3004
+#define kNewsCellHorizontalTableViewTag 4000
 
-@interface ADN_NewsViewController : UIViewController
+@interface ADN_NewsViewController : UIViewController <EasyTableViewDelegate>
 {
     UITableView* tableView;
     NSArray* details;
 }
 
-@property (nonatomic, retain) IBOutlet UITableView* tableView;
+@property (nonatomic, strong) IBOutlet UITableView* tableView;
+@property (nonatomic, strong) EasyTableView* easyTableView;
+@property (nonatomic, strong) IBOutlet UILabel* dateLabel;
 
 @end

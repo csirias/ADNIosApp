@@ -8,15 +8,26 @@
 
 #import "ADN_NewsViewController.h"
 #import "ADN_DetailViewController.h"
+#import "EasyTableView.h"
+
+#define TABLEVIEW_HEIGHT			70
+#define TABLECELL_WIDTH				100
+
+#define LABEL_TAG					100
+#define IMAGE_TAG					101
 
 @interface ADN_NewsViewController ()
-@property (nonatomic, readonly, retain) NSArray* details;
+@property (nonatomic, readonly, strong) NSArray* details;
 - (void)loadJSON:(NSError**)error;
+- (EasyTableView*)setupEasyTableViewWithNumCells:(NSUInteger)count;
 @end
 
 @implementation ADN_NewsViewController
+{
+    NSUInteger selectedColumn;
+}
 
-@synthesize tableView;
+@synthesize tableView, easyTableView, dateLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,6 +55,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.navigationController setNavigationBarHidden:TRUE animated:NO];
 }
 
 - (void)viewDidUnload
@@ -56,9 +68,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:FALSE animated:YES];
+    [self.navigationController setNavigationBarHidden:TRUE animated:YES];
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     [self.tableView deselectRowAtIndexPath:selectedIndexPath animated:YES];
+    
+    NSDateFormatter* f = [[NSDateFormatter alloc] init];
+    NSDate* date = [NSDate date];
+    [f setDateFormat:@"h':'mm a' - 'dd/MM/yyyy"];
+    dateLabel.text = [f stringFromDate:date];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -70,12 +87,12 @@
 
 - (NSInteger)tableView:(UITableView*)tv numberOfRowsInSection:(NSInteger)section
 {
-    return [self.details count];
+    return 1;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tv
 {
-    return 1;
+    return [self.details count];
 }
 
 - (CGFloat)tableView:(UITableView *)tv heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -83,12 +100,25 @@
     return 72.0f;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [[NSArray arrayWithObjects: NSLocalizedString(@"Actualidad", @""), NSLocalizedString(@"Deportes", @""), NSLocalizedString(@"Nacionales", @""), NSLocalizedString(@"Mundo", @""), nil] objectAtIndex: section];
+}
+
 - (UITableViewCell*)tableView:(UITableView*)tv cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    static NSString* kNewsCellIdentifier = @"newsCell";
+    static NSString* kNewsCellIdentifier = @"itemCell";
     UITableViewCell* cell = [tv dequeueReusableCellWithIdentifier:kNewsCellIdentifier];
-    NSDictionary* dict = [self.details objectAtIndex:indexPath.row];
 
+    EasyTableView* et = (EasyTableView*)[cell.contentView viewWithTag:kNewsCellHorizontalTableViewTag];
+    if(!et)
+    {
+        et = [self setupEasyTableViewWithNumCells:[[self.details objectAtIndex:indexPath.section] count]];
+        [cell.contentView addSubview:et];
+    }
+    et.data = [self.details objectAtIndex:indexPath.section];
+
+/*
     UILabel* titleLabel = (UILabel*)[cell viewWithTag:kNewsCellTitleTag];
     titleLabel.text = [dict objectForKey:@"title"];
 
@@ -106,19 +136,86 @@
     [f setDateFormat:@"h':'mm a' - 'dd/MM/yyyy"];
     [f setTimeZone:[NSTimeZone localTimeZone]];
     dateLabel.text = [f stringFromDate:date];
+*/
     
     return cell;
 }
+
+
+#pragma mark - EasyTableView
+
+
+- (EasyTableView*)setupEasyTableViewWithNumCells:(NSUInteger)count
+{
+	CGRect frameRect               = CGRectMake(10, 0, self.view.bounds.size.width - 20, TABLEVIEW_HEIGHT);
+	EasyTableView *view            = [[EasyTableView alloc] initWithFrame:frameRect numberOfColumns:count ofWidth:TABLECELL_WIDTH];
+	
+    view.tag                       = kNewsCellHorizontalTableViewTag;
+	view.delegate                  = self;
+	view.tableView.backgroundColor = [UIColor clearColor];
+	view.tableView.separatorColor  = [UIColor blackColor];
+	view.cellBackgroundColor       = [UIColor blackColor];
+	view.autoresizingMask          = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleWidth;
+    
+    return view;
+}
+
+
+- (UIView *)easyTableView:(EasyTableView *)easyTableView viewForRect:(CGRect)rect
+{
+    UIView* container = [[UIView alloc] initWithFrame:rect];
+    
+    UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectMake(19, 4, 64, 64)];
+    imageView.tag = kNewsCellImageViewTag;
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [container addSubview:imageView];
+
+    UILabel* titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 34, 70, 36)];
+    titleLabel.tag = kNewsCellTitleTag;
+    titleLabel.font = [UIFont systemFontOfSize:11.0f];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textAlignment = UITextAlignmentCenter;
+    titleLabel.numberOfLines = 2;
+    titleLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.75];
+    [container addSubview:titleLabel];
+
+    return container;
+}
+
+
+- (void)easyTableView:(EasyTableView *)et setDataForView:(UIView *)view forIndex:(NSUInteger)index
+{
+    UIImageView* imageView = (UIImageView*)[view viewWithTag:kNewsCellImageViewTag];
+    if([[et.data objectAtIndex:index] objectForKey:@"photo_url"] == [NSNull null])
+        imageView.image = [UIImage imageNamed:@"adn_logo.png"];
+    else
+        imageView.image = [UIImage imageNamed:@"lauraChinchilla_1_thumb.jpg"];
+    
+    UILabel* titleLabel = (UILabel*)[view viewWithTag:kNewsCellTitleTag];
+    titleLabel.text = [[et.data objectAtIndex: index] objectForKey:@"title"];
+}
+
+
+- (void)easyTableView:(EasyTableView *)easyTableView selectedView:(UIView *)selectedView atIndex:(NSUInteger)index deselectedView:(UIView *)deselectedView
+{
+    selectedColumn = index;
+    [self performSegueWithIdentifier:@"push" sender:self];
+}
+
 
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSIndexPath* selectedRowIndex = [self.tableView indexPathForSelectedRow];
-    NSDictionary* d = [details objectAtIndex:selectedRowIndex.row];
-    ADN_DetailViewController* detailVC = [segue destinationViewController];
-    [[detailVC navigationItem] setTitle:[d objectForKey:@"title"]];
-    [detailVC setDetails:d];
+    if(selectedColumn != INT_MAX)
+    {
+        NSIndexPath* selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        NSDictionary* d = [[self.details objectAtIndex:selectedRowIndex.section] objectAtIndex:selectedColumn];
+        selectedColumn = INT_MAX;
+        ADN_DetailViewController* detailVC = [segue destinationViewController];
+        [[detailVC navigationItem] setTitle:[d objectForKey:@"title"]];
+        [detailVC setDetails:d];
+    }
 }
 
 #pragma mark - Dealing with JSON

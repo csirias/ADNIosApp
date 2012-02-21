@@ -25,7 +25,6 @@
     [super viewDidLoad];
 
     [self.navigationController setNavigationBarHidden:TRUE animated:NO];
-    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width, 280)];
 }
 
 - (void)viewDidUnload

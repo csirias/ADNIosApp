@@ -53,6 +53,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [self.navigationController setNavigationBarHidden:FALSE animated:YES];
+
     NSString* title = [self.details objectForKey:@"title"];
     UILabel* titleLabel = (UILabel*)[self.view viewWithTag:kNewsCellTitleTag];
     [titleLabel setText:title];
@@ -61,10 +63,13 @@
     NSDateFormatter* f = [[NSDateFormatter alloc] init];
     [f setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
     [f setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
+        NSLog(@"date = %@", [f dateFromString:[self.details objectForKey:@"date"]]);
     NSDate* date = [f dateFromString:[self.details objectForKey:@"date"]];
-    [f setDateFormat:@"EEEE e 'de' MMMM 'del' yyyy"];
+    NSLog(@"long date format = %@", NSLocalizedString(@"Long Date Format", @""));
+    [f setDateFormat:NSLocalizedString(@"Long Date Format", @"")];
     //[f setDateFormat:@"h':'mm a' - 'dd/MM/yyyy"];
     [f setTimeZone:[NSTimeZone localTimeZone]];
+    NSLog(@"f string = %@", [f stringFromDate:date]);
     dateLabel.text = [f stringFromDate:date];
 
     savedOffset = CGPointZero;
