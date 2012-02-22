@@ -29,7 +29,7 @@ static BOOL is_ipad()
     NSUInteger selectedColumn;
 }
 
-@synthesize tableView, easyTableView, dateLabel;
+@synthesize tableView, easyTableView, dateLabel, radioStatusLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -224,6 +224,60 @@ static BOOL is_ipad()
         [detailVC setDetails:d];
     }
 }
+
+#pragma mark - AudioStreamer
+
+
+- (void)createStreamer
+{
+	if (streamer)
+	{
+		return;
+	}
+    
+	//[self destroyStreamer];
+	
+	NSString *escapedValue = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(
+                                                         nil,
+                                                         (__bridge CFStringRef)NSLocalizedString(@"http://www.fm.net.ve:9000/ADNRADIO", @""),
+                                                         NULL,
+                                                         NULL,
+                                                                  kCFStringEncodingUTF8);
+    
+	NSURL *url = [NSURL URLWithString:escapedValue];
+	streamer = [[AudioStreamer alloc] initWithURL:url];
+	    
+	[[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(playbackStateChanged:)
+     name:ASStatusChangedNotification
+     object:streamer];
+#ifdef SHOUTCAST_METADATA
+	[[NSNotificationCenter defaultCenter]
+	 addObserver:self
+	 selector:@selector(metadataChanged:)
+	 name:ASUpdateMetadataNotification
+	 object:streamer];
+#endif
+}
+
+
+- (void)startListening:(id)sender
+{
+    [self createStreamer];
+    [streamer start];
+}
+
+
+- (void)playbackStateChanged:(NSNotification *)aNotification
+{
+}
+
+
+- (void)metadataChanged:(NSNotification *)aNotification
+{
+}
+
 
 #pragma mark - Dealing with JSON
 

@@ -38,8 +38,8 @@
                                     <outlet property="delegate" destination="2" id="ugo-Yt-NYH"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cabina en Vivo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WhH-9p-fct">
-                                <rect key="frame" x="578" y="56" width="126" height="22"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Listen Live" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WhH-9p-fct">
+                                <rect key="frame" x="631" y="56" width="73" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -63,12 +63,16 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startListening:" destination="2" eventType="touchUpInside" id="8Ux-pG-XuJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="lGC-D9-OkC" id="Vu7-tM-vFk"/>
+                        <outlet property="radioStatusLabel" destination="WhH-9p-fct" id="yO1-y0-07T"/>
                         <outlet property="tableView" destination="1k7-zo-Uyl" id="XEo-EK-hP7"/>
                         <segue destination="4rm-Uc-E25" kind="modal" identifier="push" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="K2r-rR-dpO"/>
                     </connections>
@@ -149,7 +153,9 @@
         <class className="ADN_NewsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ADN_NewsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="startListening:"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="radioStatusLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>

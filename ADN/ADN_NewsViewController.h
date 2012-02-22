@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "EasyTableView.h"
+#import "AudioStreamer.h"
 
 #define kNewsCellImageViewTag           3000
 #define kNewsCellTitleTag               3001
@@ -20,10 +21,14 @@
 {
     UITableView* tableView;
     NSArray* details;
+    AudioStreamer* streamer;
 }
 
 @property (nonatomic, strong) IBOutlet UITableView* tableView;
 @property (nonatomic, strong) EasyTableView* easyTableView;
 @property (nonatomic, strong) IBOutlet UILabel* dateLabel;
+@property (nonatomic, strong) IBOutlet UILabel* radioStatusLabel;
+
+- (IBAction)startListening:(id)sender;
 
 @end
