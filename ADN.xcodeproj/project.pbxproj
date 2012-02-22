@@ -24,6 +24,15 @@
 		4E277A5E14F56BB7008687F2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E277A5D14F56BB6008687F2 /* MediaPlayer.framework */; };
 		4E277A6014F56BBD008687F2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E277A5F14F56BBC008687F2 /* AudioToolbox.framework */; };
 		4E277A6214F56BC6008687F2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E277A6114F56BC6008687F2 /* CFNetwork.framework */; };
+		4E277A6914F58E7F008687F2 /* carnavalDesampa2_thumb.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A6314F58E7F008687F2 /* carnavalDesampa2_thumb.JPG */; };
+		4E277A6A14F58E7F008687F2 /* DiputadoAngulo2_thumb.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A6414F58E7F008687F2 /* DiputadoAngulo2_thumb.JPG */; };
+		4E277A6B14F58E7F008687F2 /* ex%20mundialistas%20italia%2090_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A6514F58E7F008687F2 /* ex%20mundialistas%20italia%2090_thumb.jpg */; };
+		4E277A6C14F58E7F008687F2 /* GripeAH1N12_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A6614F58E7F008687F2 /* GripeAH1N12_thumb.jpg */; };
+		4E277A6D14F58E7F008687F2 /* Opositores1_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A6714F58E7F008687F2 /* Opositores1_thumb.jpg */; };
+		4E277A6E14F58E7F008687F2 /* OttonSolisGolpe2_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A6814F58E7F008687F2 /* OttonSolisGolpe2_thumb.jpg */; };
+		4E277A7014F58ECE008687F2 /* NeryBrenes%20llegada4_thumb%20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A6F14F58ECE008687F2 /* NeryBrenes%20llegada4_thumb%20.jpg */; };
+		4E277A7214F58F6E008687F2 /* estadio%20nacional44_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A7114F58F6E008687F2 /* estadio%20nacional44_thumb.jpg */; };
+		4E277A7414F591A6008687F2 /* PINTO%20CAPACITA4_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A7314F591A6008687F2 /* PINTO%20CAPACITA4_thumb.jpg */; };
 		4E4FCC9C14F2F8880079F043 /* EasyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FCC9B14F2F8880079F043 /* EasyTableView.m */; };
 		4E63C82514F3FA4D00D91596 /* EasyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FCC9B14F2F8880079F043 /* EasyTableView.m */; };
 		4EF9827E14ED4FC7003108E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9827D14ED4FC7003108E1 /* UIKit.framework */; };
@@ -74,6 +83,15 @@
 		4E277A5D14F56BB6008687F2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		4E277A5F14F56BBC008687F2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4E277A6114F56BC6008687F2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4E277A6314F58E7F008687F2 /* carnavalDesampa2_thumb.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carnavalDesampa2_thumb.JPG; sourceTree = "<group>"; };
+		4E277A6414F58E7F008687F2 /* DiputadoAngulo2_thumb.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DiputadoAngulo2_thumb.JPG; sourceTree = "<group>"; };
+		4E277A6514F58E7F008687F2 /* ex%20mundialistas%20italia%2090_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ex%20mundialistas%20italia%2090_thumb.jpg"; sourceTree = "<group>"; };
+		4E277A6614F58E7F008687F2 /* GripeAH1N12_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GripeAH1N12_thumb.jpg; sourceTree = "<group>"; };
+		4E277A6714F58E7F008687F2 /* Opositores1_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Opositores1_thumb.jpg; sourceTree = "<group>"; };
+		4E277A6814F58E7F008687F2 /* OttonSolisGolpe2_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OttonSolisGolpe2_thumb.jpg; sourceTree = "<group>"; };
+		4E277A6F14F58ECE008687F2 /* NeryBrenes%20llegada4_thumb%20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "NeryBrenes%20llegada4_thumb%20.jpg"; sourceTree = "<group>"; };
+		4E277A7114F58F6E008687F2 /* estadio%20nacional44_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "estadio%20nacional44_thumb.jpg"; sourceTree = "<group>"; };
+		4E277A7314F591A6008687F2 /* PINTO%20CAPACITA4_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "PINTO%20CAPACITA4_thumb.jpg"; sourceTree = "<group>"; };
 		4E4FCC9414F2CEC40079F043 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E4FCC9A14F2F8880079F043 /* EasyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyTableView.h; sourceTree = "<group>"; };
 		4E4FCC9B14F2F8880079F043 /* EasyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyTableView.m; sourceTree = "<group>"; };
@@ -231,6 +249,15 @@
 		4EF982B614ED5C20003108E1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4E277A7314F591A6008687F2 /* PINTO%20CAPACITA4_thumb.jpg */,
+				4E277A7114F58F6E008687F2 /* estadio%20nacional44_thumb.jpg */,
+				4E277A6F14F58ECE008687F2 /* NeryBrenes%20llegada4_thumb%20.jpg */,
+				4E277A6314F58E7F008687F2 /* carnavalDesampa2_thumb.JPG */,
+				4E277A6414F58E7F008687F2 /* DiputadoAngulo2_thumb.JPG */,
+				4E277A6514F58E7F008687F2 /* ex%20mundialistas%20italia%2090_thumb.jpg */,
+				4E277A6614F58E7F008687F2 /* GripeAH1N12_thumb.jpg */,
+				4E277A6714F58E7F008687F2 /* Opositores1_thumb.jpg */,
+				4E277A6814F58E7F008687F2 /* OttonSolisGolpe2_thumb.jpg */,
 				4E277A4014F548FB008687F2 /* appicon_57.png */,
 				4E277A4114F548FB008687F2 /* appicon_72.png */,
 				4E277A4214F548FB008687F2 /* appicon_114.png */,
@@ -323,6 +350,15 @@
 				4E277A4414F548FB008687F2 /* appicon_72.png in Resources */,
 				4E277A4514F548FB008687F2 /* appicon_114.png in Resources */,
 				4E277A4814F54944008687F2 /* MainStoryboard_iPad.storyboard in Resources */,
+				4E277A6914F58E7F008687F2 /* carnavalDesampa2_thumb.JPG in Resources */,
+				4E277A6A14F58E7F008687F2 /* DiputadoAngulo2_thumb.JPG in Resources */,
+				4E277A6B14F58E7F008687F2 /* ex%20mundialistas%20italia%2090_thumb.jpg in Resources */,
+				4E277A6C14F58E7F008687F2 /* GripeAH1N12_thumb.jpg in Resources */,
+				4E277A6D14F58E7F008687F2 /* Opositores1_thumb.jpg in Resources */,
+				4E277A6E14F58E7F008687F2 /* OttonSolisGolpe2_thumb.jpg in Resources */,
+				4E277A7014F58ECE008687F2 /* NeryBrenes%20llegada4_thumb%20.jpg in Resources */,
+				4E277A7214F58F6E008687F2 /* estadio%20nacional44_thumb.jpg in Resources */,
+				4E277A7414F591A6008687F2 /* PINTO%20CAPACITA4_thumb.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

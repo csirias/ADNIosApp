@@ -16,6 +16,5 @@
 "Short Date Format" = "h':'mm a' - 'dd/MM/yyyy";
 "Long Date Format" = "EEEE e 'de' MMMM 'del' yyyy";
 "Radio Status Stopped" = "Cabina en Vivo";
-"Radio Status Connecting" = "Connecting";
 "Radio Status Loading" = "Cargando";
-"Radio Status Playing" = "Stop Playing";
+"Radio Status Playing" = "Detener";

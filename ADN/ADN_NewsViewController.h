@@ -22,10 +22,10 @@
     UITableView* tableView;
     NSArray* details;
     AudioStreamer* streamer;
+    EasyTableView* easyTableView[4];
 }
 
 @property (nonatomic, strong) IBOutlet UITableView* tableView;
-@property (nonatomic, strong) EasyTableView* easyTableView;
 @property (nonatomic, strong) IBOutlet UILabel* dateLabel;
 @property (nonatomic, strong) IBOutlet UILabel* radioStatusLabel;
 

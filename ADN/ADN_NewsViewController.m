@@ -27,9 +27,10 @@ static BOOL is_ipad()
 @implementation ADN_NewsViewController
 {
     NSUInteger selectedColumn;
+    NSArray*   selectedData;
 }
 
-@synthesize tableView, easyTableView, dateLabel, radioStatusLabel;
+@synthesize tableView, dateLabel, radioStatusLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -122,13 +123,18 @@ static BOOL is_ipad()
     static NSString* kNewsCellIdentifier = @"itemCell";
     UITableViewCell* cell = [tv dequeueReusableCellWithIdentifier:kNewsCellIdentifier];
 
-    EasyTableView* et = (EasyTableView*)[cell.contentView viewWithTag:kNewsCellHorizontalTableViewTag];
-    if(!et)
+    UIView* v = [cell.contentView viewWithTag:kNewsCellHorizontalTableViewTag];
+    [v removeFromSuperview];
+
+    if(!easyTableView[indexPath.section])
     {
-        et = [self setupEasyTableViewWithNumCells:[[self.details objectAtIndex:indexPath.section] count]];
-        [cell.contentView addSubview:et];
+        EasyTableView* et = [self setupEasyTableViewWithNumCells:[[self.details objectAtIndex:indexPath.section] count]];
+        easyTableView[indexPath.section] = et;
     }
-    et.data = [self.details objectAtIndex:indexPath.section];
+
+    easyTableView[indexPath.section].data = [self.details objectAtIndex:indexPath.section];
+    
+    [cell.contentView addSubview:easyTableView[indexPath.section]];
 
     return cell;
 }
@@ -194,17 +200,17 @@ static BOOL is_ipad()
     if([[et.data objectAtIndex:index] objectForKey:@"photo_url"] == [NSNull null])
         imageView.image = [UIImage imageNamed:@"adn_logo.png"];
     else
-        imageView.image = [UIImage imageNamed:@"lauraChinchilla_1_thumb.jpg"];
+        imageView.image = [UIImage imageNamed:[[et.data objectAtIndex:index] objectForKey:@"photo_url"]];
     
     UILabel* titleLabel = (UILabel*)[view viewWithTag:kNewsCellTitleTag];
     titleLabel.text = [[et.data objectAtIndex: index] objectForKey:@"title"];
 }
 
 
-- (void)easyTableView:(EasyTableView *)easyTableView selectedView:(UIView *)selectedView atIndex:(NSUInteger)index deselectedView:(UIView *)deselectedView
+- (void)easyTableView:(EasyTableView *)et selectedView:(UIView *)selectedView atIndex:(NSUInteger)index deselectedView:(UIView *)deselectedView
 {
-    NSLog(@"tapped at index %ul", index);
     selectedColumn = index;
+    selectedData = et.data;
     [self performSegueWithIdentifier:@"push" sender:self];
 }
 
@@ -213,11 +219,9 @@ static BOOL is_ipad()
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"selectedColumn = %u", selectedColumn);
     if(selectedColumn != INT_MAX)
     {
-        NSIndexPath* selectedRowIndex = [self.tableView indexPathForSelectedRow];
-        NSDictionary* d = [[self.details objectAtIndex:selectedRowIndex.section] objectAtIndex:selectedColumn];
+        NSDictionary* d = [selectedData objectAtIndex:selectedColumn];
         selectedColumn = INT_MAX;
         ADN_DetailViewController* detailVC = [segue destinationViewController];
         [[detailVC navigationItem] setTitle:[d objectForKey:@"title"]];
@@ -228,6 +232,20 @@ static BOOL is_ipad()
 #pragma mark - AudioStreamer
 
 
+- (void)destroyStreamer
+{
+	if(streamer)
+	{
+		[[NSNotificationCenter defaultCenter]
+         removeObserver:self
+         name:ASStatusChangedNotification
+         object:streamer];
+		
+		[streamer stop];
+		streamer = nil;
+	}
+}
+
 - (void)createStreamer
 {
 	if (streamer)
@@ -235,7 +253,7 @@ static BOOL is_ipad()
 		return;
 	}
     
-	//[self destroyStreamer];
+	[self destroyStreamer];
 	
 	NSString *escapedValue = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(
                                                          nil,
@@ -264,13 +282,29 @@ static BOOL is_ipad()
 
 - (void)startListening:(id)sender
 {
-    [self createStreamer];
-    [streamer start];
+    if(![streamer isPlaying] && ![streamer isWaiting])
+    {
+        [self createStreamer];
+        [streamer start];
+    }
+    else
+    {
+        [self destroyStreamer];
+        self.radioStatusLabel.text = NSLocalizedString(@"Radio Status Stopped", @"");
+    }
 }
 
 
 - (void)playbackStateChanged:(NSNotification *)aNotification
 {
+    if([streamer isWaiting])
+        self.radioStatusLabel.text = NSLocalizedString(@"Radio Status Loading", @"");
+    else if([streamer isPaused])
+        self.radioStatusLabel.text = NSLocalizedString(@"Radio Status Stopped", @"");
+    else if([streamer isPlaying])
+        self.radioStatusLabel.text = NSLocalizedString(@"Radio Status Playing", @"");
+    else if([streamer isIdle])
+        self.radioStatusLabel.text = NSLocalizedString(@"Radio Status Stopped", @"");
 }
 
 
