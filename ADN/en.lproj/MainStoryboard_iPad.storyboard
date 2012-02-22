@@ -70,9 +70,54 @@
                     <connections>
                         <outlet property="dateLabel" destination="lGC-D9-OkC" id="Vu7-tM-vFk"/>
                         <outlet property="tableView" destination="1k7-zo-Uyl" id="XEo-EK-hP7"/>
+                        <segue destination="4rm-Uc-E25" kind="push" identifier="push" id="K2r-rR-dpO"/>
                     </connections>
                 </viewController>
             </objects>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Eic-Hs-I1f">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBW-Cp-iOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="4rm-Uc-E25" customClass="ADN_DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CKc-qQ-aRo">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="TWv-iM-q9g">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3001" contentMode="left" text="Title goes here" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" id="HQy-4s-ZsG">
+                                        <rect key="frame" x="6" y="20" width="756" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3003" contentMode="left" text="Date goes here" lineBreakMode="tailTruncation" minimumFontSize="10" id="Ra3-04-Q5H">
+                                        <rect key="frame" x="6" y="0.0" width="756" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3004" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" id="UwJ-3R-lCA">
+                                        <rect key="frame" x="0.0" y="55" width="768" height="361"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pel-X7-g31"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="953" y="-134"/>
         </scene>
     </scenes>
     <resources>
@@ -80,6 +125,12 @@
         <image name="audio.png" width="36" height="36"/>
     </resources>
     <classes>
+        <class className="ADN_DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ADN_DetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
         <class className="ADN_NewsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ADN_NewsViewController.h"/>
             <relationships>
