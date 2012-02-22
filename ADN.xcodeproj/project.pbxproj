@@ -59,7 +59,7 @@
 		4E277A4114F548FB008687F2 /* appicon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_72.png; sourceTree = SOURCE_ROOT; };
 		4E277A4214F548FB008687F2 /* appicon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_114.png; sourceTree = SOURCE_ROOT; };
 		4E277A4714F54944008687F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		4E277A4914F54950008687F2 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		4E277A4A14F54A7D008687F2 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		4E4FCC9414F2CEC40079F043 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E4FCC9A14F2F8880079F043 /* EasyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyTableView.h; sourceTree = "<group>"; };
 		4E4FCC9B14F2F8880079F043 /* EasyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyTableView.m; sourceTree = "<group>"; };
@@ -374,7 +374,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4E277A4714F54944008687F2 /* en */,
-				4E277A4914F54950008687F2 /* es */,
+				4E277A4A14F54A7D008687F2 /* es */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";

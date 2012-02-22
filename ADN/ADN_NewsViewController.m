@@ -10,11 +10,13 @@
 #import "ADN_DetailViewController.h"
 #import "EasyTableView.h"
 
-#define TABLEVIEW_HEIGHT			70
-#define TABLECELL_WIDTH				100
+static NSUInteger kADNTableViewHeight = 70;
+static NSUInteger kADNTableCellWidth  = 100;
 
-#define LABEL_TAG					100
-#define IMAGE_TAG					101
+static BOOL is_ipad()
+{
+    return [[[UIDevice currentDevice] model] isEqualToString:@"iPad"];
+}
 
 @interface ADN_NewsViewController ()
 @property (nonatomic, readonly, strong) NSArray* details;
@@ -72,9 +74,18 @@
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     [self.tableView deselectRowAtIndexPath:selectedIndexPath animated:YES];
     
+    if(is_ipad())
+    {
+        kADNTableViewHeight = 140;
+        kADNTableCellWidth = 200;
+    }
+    
     NSDateFormatter* f = [[NSDateFormatter alloc] init];
     NSDate* date = [NSDate date];
-    [f setDateFormat:@"h':'mm a' - 'dd/MM/yyyy"];
+    NSString* dateFormat = @"h':'mm a' - 'dd/MM/yyyy";
+    if(is_ipad())
+        dateFormat = NSLocalizedString(@"Long Date Format", @"");
+    [f setDateFormat:dateFormat];
     dateLabel.text = [f stringFromDate:date];
 }
 
@@ -97,7 +108,7 @@
 
 - (CGFloat)tableView:(UITableView *)tv heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 72.0f;
+    return is_ipad() ? 142.0f : 72.0f;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -128,8 +139,8 @@
 
 - (EasyTableView*)setupEasyTableViewWithNumCells:(NSUInteger)count
 {
-	CGRect frameRect               = CGRectMake(10, 0, self.view.bounds.size.width - 20, TABLEVIEW_HEIGHT);
-	EasyTableView *view            = [[EasyTableView alloc] initWithFrame:frameRect numberOfColumns:count ofWidth:TABLECELL_WIDTH];
+	CGRect frameRect               = CGRectMake(10, 0, self.view.bounds.size.width - 20, kADNTableViewHeight);
+	EasyTableView *view            = [[EasyTableView alloc] initWithFrame:frameRect numberOfColumns:count ofWidth:kADNTableCellWidth];
 	
     view.tag                       = kNewsCellHorizontalTableViewTag;
 	view.delegate                  = self;
