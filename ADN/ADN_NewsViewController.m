@@ -203,6 +203,7 @@ static BOOL is_ipad()
 
 - (void)easyTableView:(EasyTableView *)easyTableView selectedView:(UIView *)selectedView atIndex:(NSUInteger)index deselectedView:(UIView *)deselectedView
 {
+    NSLog(@"tapped at index %ul", index);
     selectedColumn = index;
     [self performSegueWithIdentifier:@"push" sender:self];
 }
@@ -212,6 +213,7 @@ static BOOL is_ipad()
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSLog(@"selectedColumn = %u", selectedColumn);
     if(selectedColumn != INT_MAX)
     {
         NSIndexPath* selectedRowIndex = [self.tableView indexPathForSelectedRow];
