@@ -102,7 +102,8 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [[NSArray arrayWithObjects: NSLocalizedString(@"Actualidad", @""), NSLocalizedString(@"Deportes", @""), NSLocalizedString(@"Nacionales", @""), NSLocalizedString(@"Mundo", @""), nil] objectAtIndex: section];
+    NSString* sections[4] = { NSLocalizedString(@"Actualidad", @""), NSLocalizedString(@"Deportes", @""), NSLocalizedString(@"Nacionales", @""), NSLocalizedString(@"Mundo", @"") };
+    return sections[section];
 }
 
 - (UITableViewCell*)tableView:(UITableView*)tv cellForRowAtIndexPath:(NSIndexPath*)indexPath
@@ -118,26 +119,6 @@
     }
     et.data = [self.details objectAtIndex:indexPath.section];
 
-/*
-    UILabel* titleLabel = (UILabel*)[cell viewWithTag:kNewsCellTitleTag];
-    titleLabel.text = [dict objectForKey:@"title"];
-
-    UIImageView* iv = (UIImageView*)[cell viewWithTag:kNewsCellImageViewTag];
-    iv.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"adn_logo" ofType:@"png"]];
-
-    UILabel* descLabel = (UILabel*)[cell viewWithTag:kNewsCellDescriptionTag];
-    descLabel.text = [dict objectForKey:@"desc"];
-
-    UILabel* dateLabel = (UILabel*)[cell viewWithTag:kNewsCellDateTag];
-    NSDateFormatter* f = [[NSDateFormatter alloc] init];
-    [f setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
-    [f setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
-    NSDate* date = [f dateFromString:[dict objectForKey:@"date"]];
-    [f setDateFormat:@"h':'mm a' - 'dd/MM/yyyy"];
-    [f setTimeZone:[NSTimeZone localTimeZone]];
-    dateLabel.text = [f stringFromDate:date];
-*/
-    
     return cell;
 }
 

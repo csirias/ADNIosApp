@@ -13,6 +13,7 @@
 		4E277A1314F4215F008687F2 /* lauraChinchilla_1_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A1214F4215F008687F2 /* lauraChinchilla_1_thumb.jpg */; };
 		4E277A1914F42FDA008687F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A1B14F42FDA008687F2 /* Localizable.strings */; };
 		4E277A1E14F4310F008687F2 /* audio.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A1D14F4310F008687F2 /* audio.png */; };
+		4E277A3F14F54788008687F2 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF9829214ED4FC7003108E1 /* MainStoryboard_iPad.storyboard */; };
 		4E4FCC9C14F2F8880079F043 /* EasyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FCC9B14F2F8880079F043 /* EasyTableView.m */; };
 		4E63C82514F3FA4D00D91596 /* EasyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FCC9B14F2F8880079F043 /* EasyTableView.m */; };
 		4EF9827E14ED4FC7003108E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9827D14ED4FC7003108E1 /* UIKit.framework */; };
@@ -22,8 +23,6 @@
 		4EF9828A14ED4FC7003108E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF9828914ED4FC7003108E1 /* main.m */; };
 		4EF9828E14ED4FC7003108E1 /* ADN_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF9828D14ED4FC7003108E1 /* ADN_AppDelegate.m */; };
 		4EF9829114ED4FC7003108E1 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF9828F14ED4FC7003108E1 /* MainStoryboard_iPhone.storyboard */; };
-		4EF9829414ED4FC7003108E1 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF9829214ED4FC7003108E1 /* MainStoryboard_iPad.storyboard */; };
-		4EF9829714ED4FC7003108E1 /* ADN_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF9829614ED4FC7003108E1 /* ADN_ViewController.m */; };
 		4EF9829F14ED4FC7003108E1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9829E14ED4FC7003108E1 /* SenTestingKit.framework */; };
 		4EF982A014ED4FC7003108E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9827D14ED4FC7003108E1 /* UIKit.framework */; };
 		4EF982A114ED4FC7003108E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9827F14ED4FC7003108E1 /* Foundation.framework */; };
@@ -68,8 +67,6 @@
 		4EF9828D14ED4FC7003108E1 /* ADN_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADN_AppDelegate.m; sourceTree = "<group>"; };
 		4EF9829014ED4FC7003108E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		4EF9829314ED4FC7003108E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		4EF9829514ED4FC7003108E1 /* ADN_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADN_ViewController.h; sourceTree = "<group>"; };
-		4EF9829614ED4FC7003108E1 /* ADN_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADN_ViewController.m; sourceTree = "<group>"; };
 		4EF9829D14ED4FC7003108E1 /* ADNTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF9829E14ED4FC7003108E1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4EF982A614ED4FC7003108E1 /* ADNTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ADNTests-Info.plist"; sourceTree = "<group>"; };
@@ -150,8 +147,6 @@
 				4EF9828D14ED4FC7003108E1 /* ADN_AppDelegate.m */,
 				4EF9828F14ED4FC7003108E1 /* MainStoryboard_iPhone.storyboard */,
 				4EF9829214ED4FC7003108E1 /* MainStoryboard_iPad.storyboard */,
-				4EF9829514ED4FC7003108E1 /* ADN_ViewController.h */,
-				4EF9829614ED4FC7003108E1 /* ADN_ViewController.m */,
 				4E0A38D914ED6655009D3245 /* ADN_NewsViewController.h */,
 				4E0A38DA14ED6655009D3245 /* ADN_NewsViewController.m */,
 				4E0A38E514ED9E1F009D3245 /* ADN_DetailViewController.h */,
@@ -283,9 +278,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E277A3F14F54788008687F2 /* MainStoryboard_iPad.storyboard in Resources */,
 				4EF9828814ED4FC7003108E1 /* InfoPlist.strings in Resources */,
 				4EF9829114ED4FC7003108E1 /* MainStoryboard_iPhone.storyboard in Resources */,
-				4EF9829414ED4FC7003108E1 /* MainStoryboard_iPad.storyboard in Resources */,
 				4EF982B814ED5CA7003108E1 /* adn_logo.png in Resources */,
 				4E0A38E114ED7E51009D3245 /* actualidad.json in Resources */,
 				4E277A1314F4215F008687F2 /* lauraChinchilla_1_thumb.jpg in Resources */,
@@ -328,7 +323,6 @@
 				4E63C82514F3FA4D00D91596 /* EasyTableView.m in Sources */,
 				4EF9828A14ED4FC7003108E1 /* main.m in Sources */,
 				4EF9828E14ED4FC7003108E1 /* ADN_AppDelegate.m in Sources */,
-				4EF9829714ED4FC7003108E1 /* ADN_ViewController.m in Sources */,
 				4E0A38DC14ED6655009D3245 /* ADN_NewsViewController.m in Sources */,
 				4E0A38E714ED9E1F009D3245 /* ADN_DetailViewController.m in Sources */,
 			);
