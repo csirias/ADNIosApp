@@ -157,17 +157,30 @@ static BOOL is_ipad()
 {
     UIView* container = [[UIView alloc] initWithFrame:rect];
     
-    UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectMake(19, 4, 64, 64)];
+    CGRect imageViewRect = CGRectMake(19, 4, 64, 64);
+    if(is_ipad())
+        imageViewRect = CGRectMake(19, 4, 140, 130);
+    UIImageView* imageView = [[UIImageView alloc] initWithFrame:imageViewRect];
     imageView.tag = kNewsCellImageViewTag;
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     [container addSubview:imageView];
 
-    UILabel* titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 34, 70, 36)];
+    UILabel* titleLabel = nil;
+    if(is_ipad())
+    {
+        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(19, 67, 140, 67)];
+        titleLabel.numberOfLines = 3;
+        titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    }
+    else
+    {
+        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(19, 34, 66, 36)];
+        titleLabel.numberOfLines = 2;
+        titleLabel.font = [UIFont systemFontOfSize:11.0f];
+    }
     titleLabel.tag = kNewsCellTitleTag;
-    titleLabel.font = [UIFont systemFontOfSize:11.0f];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.textAlignment = UITextAlignmentCenter;
-    titleLabel.numberOfLines = 2;
     titleLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.75];
     [container addSubview:titleLabel];
 
