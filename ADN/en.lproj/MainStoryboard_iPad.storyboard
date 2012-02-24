@@ -72,6 +72,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="lGC-D9-OkC" id="Vu7-tM-vFk"/>
+                        <outlet property="radioButton" destination="UGU-qP-g5T" id="CBl-wj-OOj"/>
                         <outlet property="radioStatusLabel" destination="WhH-9p-fct" id="yO1-y0-07T"/>
                         <outlet property="tableView" destination="1k7-zo-Uyl" id="XEo-EK-hP7"/>
                         <segue destination="4rm-Uc-E25" kind="modal" identifier="push" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="K2r-rR-dpO"/>
@@ -155,6 +156,7 @@
             <relationships>
                 <relationship kind="action" name="startListening:"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="radioButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="radioStatusLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>

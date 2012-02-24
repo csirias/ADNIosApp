@@ -28,6 +28,7 @@
 @property (nonatomic, strong) IBOutlet UITableView* tableView;
 @property (nonatomic, strong) IBOutlet UILabel* dateLabel;
 @property (nonatomic, strong) IBOutlet UILabel* radioStatusLabel;
+@property (nonatomic, strong) IBOutlet UIButton* radioButton;
 
 - (IBAction)startListening:(id)sender;
 

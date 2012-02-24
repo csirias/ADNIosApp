@@ -28,9 +28,10 @@ static BOOL is_ipad()
 {
     NSUInteger selectedColumn;
     NSArray*   selectedData;
+    BOOL       radioPlaying;
 }
 
-@synthesize tableView, dateLabel, radioStatusLabel;
+@synthesize tableView, dateLabel, radioStatusLabel, radioButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -93,6 +94,16 @@ static BOOL is_ipad()
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return UIInterfaceOrientationIsLandscape(interfaceOrientation) || interfaceOrientation == UIInterfaceOrientationPortrait;
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    for(int i = 0; i < 4; i++)
+    {
+        CGRect frame = easyTableView[i].frame;
+        frame.size.width = self.view.bounds.size.width;
+        easyTableView[i].frame = frame;
+    }
 }
 
 #pragma mark - TableView
@@ -234,6 +245,7 @@ static BOOL is_ipad()
 
 - (void)destroyStreamer
 {
+    NSLog(@"streamer = %@", streamer);
 	if(streamer)
 	{
 		[[NSNotificationCenter defaultCenter]
@@ -284,6 +296,7 @@ static BOOL is_ipad()
 {
     if(![streamer isPlaying] && ![streamer isWaiting])
     {
+        self.radioButton.enabled = NO;
         [self createStreamer];
         [streamer start];
     }
@@ -302,9 +315,15 @@ static BOOL is_ipad()
     else if([streamer isPaused])
         self.radioStatusLabel.text = NSLocalizedString(@"Radio Status Stopped", @"");
     else if([streamer isPlaying])
+    {
         self.radioStatusLabel.text = NSLocalizedString(@"Radio Status Playing", @"");
+        self.radioButton.enabled = YES;
+    }
     else if([streamer isIdle])
+    {
         self.radioStatusLabel.text = NSLocalizedString(@"Radio Status Stopped", @"");
+        self.radioButton.enabled = YES;
+    }
 }
 
 

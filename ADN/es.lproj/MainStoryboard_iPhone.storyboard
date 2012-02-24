@@ -73,6 +73,7 @@
                     <navigationItem key="navigationItem" id="Hu2-Lr-7jC"/>
                     <connections>
                         <outlet property="dateLabel" destination="UcL-4F-zp6" id="DNz-oQ-cLh"/>
+                        <outlet property="radioButton" destination="PQw-O6-IlT" id="Xij-jm-eEi"/>
                         <outlet property="radioStatusLabel" destination="yXV-9i-dRC" id="3Kc-5R-upK"/>
                         <outlet property="tableView" destination="yby-9r-Pbm" id="ykp-Qr-1HQ"/>
                         <segue destination="qIq-EI-fya" kind="push" identifier="push" id="FvM-2V-OGT"/>
@@ -164,6 +165,7 @@
             <relationships>
                 <relationship kind="action" name="startListening:"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="radioButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="radioStatusLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
