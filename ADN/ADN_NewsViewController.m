@@ -9,6 +9,8 @@
 #import "ADN_NewsViewController.h"
 #import "ADN_DetailViewController.h"
 #import "EasyTableView.h"
+#import "AsyncImageView.h"
+#import "ADN_NewsItem.h"
 
 static NSUInteger kADNTableViewHeight = 70;
 static NSUInteger kADNTableCellWidth  = 100;
@@ -177,7 +179,7 @@ static BOOL is_ipad()
     CGRect imageViewRect = CGRectMake(19, 4, 64, 64);
     if(is_ipad())
         imageViewRect = CGRectMake(19, 4, 140, 130);
-    UIImageView* imageView = [[UIImageView alloc] initWithFrame:imageViewRect];
+    AsyncImageView* imageView = [[AsyncImageView alloc] initWithFrame:imageViewRect];
     imageView.tag = kNewsCellImageViewTag;
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     [container addSubview:imageView];
@@ -207,14 +209,16 @@ static BOOL is_ipad()
 
 - (void)easyTableView:(EasyTableView *)et setDataForView:(UIView *)view forIndex:(NSUInteger)index
 {
-    UIImageView* imageView = (UIImageView*)[view viewWithTag:kNewsCellImageViewTag];
-    if([[et.data objectAtIndex:index] objectForKey:@"photo_url"] == [NSNull null])
+    AsyncImageView* imageView = (AsyncImageView*)[view viewWithTag:kNewsCellImageViewTag];
+    NSURL* imageURL = [[et.data objectAtIndex:index] imageURL];
+    if(imageURL && [[imageURL absoluteString] isEqualToString:@"http://www.adn.fm"])
         imageView.image = [UIImage imageNamed:@"adn_logo.png"];
     else
-        imageView.image = [UIImage imageNamed:[[et.data objectAtIndex:index] objectForKey:@"photo_url"]];
+        imageView.imageURL = imageURL;
+    imageView.crossfadeImages = NO;
     
     UILabel* titleLabel = (UILabel*)[view viewWithTag:kNewsCellTitleTag];
-    titleLabel.text = [[et.data objectAtIndex: index] objectForKey:@"title"];
+    titleLabel.text = [[et.data objectAtIndex: index] title];
 }
 
 
@@ -232,11 +236,12 @@ static BOOL is_ipad()
 {
     if(selectedColumn != INT_MAX)
     {
-        NSDictionary* d = [selectedData objectAtIndex:selectedColumn];
+        ADN_NewsItem* d = [selectedData objectAtIndex:selectedColumn];
         selectedColumn = INT_MAX;
         ADN_DetailViewController* detailVC = [segue destinationViewController];
-        [[detailVC navigationItem] setTitle:[d objectForKey:@"title"]];
-        [detailVC setDetails:d];
+        [[detailVC navigationItem] setTitle:d.title];
+        detailVC.url = d.detailURL;
+        NSLog(@"Loading webview with URL %@", d.detailURL);
     }
 }
 
@@ -338,9 +343,35 @@ static BOOL is_ipad()
 
 - (void)loadJSON:(NSError**)error
 {
+    NSData* returnedData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:NSLocalizedString(@"MainJSONFeed", @"")]];
+    NSArray* array = [NSJSONSerialization JSONObjectWithData:returnedData options:kNilOptions error:error];
+    NSMutableArray* tmp = [NSMutableArray arrayWithObjects:[NSMutableArray array], [NSMutableArray array], [NSMutableArray array], [NSMutableArray array], nil];
+    NSUInteger sectionId = 0;
+
+    for(NSDictionary* d in array)
+    {
+        switch([[d objectForKey:@"CategoryTabID"] intValue])
+        {
+            case 81:
+                sectionId = 1;
+                break;
+            case 61:
+                sectionId = 2;
+                break;
+            default:
+                break;
+        }
+
+        ADN_NewsItem* item = [[ADN_NewsItem alloc] initWithDictionary:d];
+        [[tmp objectAtIndex:sectionId] addObject: item];
+    }
+
+    details = [tmp copy];
+    /*
     NSString* filePath = [[NSBundle mainBundle] pathForResource:@"actualidad" ofType:@"json"];
     NSData* data = [NSData dataWithContentsOfFile:filePath];
     details = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:error];
+     */
 }
 
 - (NSArray*)details
@@ -351,7 +382,10 @@ static BOOL is_ipad()
 
     [self loadJSON:&error];
     if(error)
+    {
+        NSLog(@"Error: %@", error);
         return [NSArray array]; // This should do something more constructive
+    }
 
     return details;
 }

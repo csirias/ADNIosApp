@@ -8,13 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ADN_DetailViewController : UIViewController <UIScrollViewDelegate>
-{
-    NSDictionary* details;
-    CGPoint savedOffset;
-}
+@interface ADN_DetailViewController : UIViewController <UIWebViewDelegate>
 
-@property (nonatomic, strong) NSDictionary* details;
-@property (nonatomic, strong) IBOutlet UIScrollView* scrollView;
+@property (nonatomic, strong) NSURL* url;
+@property (nonatomic, strong) IBOutlet UIWebView* webView;
 
 @end

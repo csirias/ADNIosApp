@@ -64,7 +64,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="startListening:" destination="2" eventType="touchUpInside" id="iF5-kd-Yde"/>
+                                    <action selector="startListening:" destination="2" eventType="touchUpInside" id="8Ux-pG-XuJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -72,8 +72,8 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="lGC-D9-OkC" id="Vu7-tM-vFk"/>
-                        <outlet property="radioButton" destination="UGU-qP-g5T" id="2kr-kz-qfh"/>
-                        <outlet property="radioStatusLabel" destination="WhH-9p-fct" id="PQU-Cg-GCv"/>
+                        <outlet property="radioButton" destination="UGU-qP-g5T" id="CBl-wj-OOj"/>
+                        <outlet property="radioStatusLabel" destination="WhH-9p-fct" id="yO1-y0-07T"/>
                         <outlet property="tableView" destination="1k7-zo-Uyl" id="XEo-EK-hP7"/>
                         <segue destination="4rm-Uc-E25" kind="modal" identifier="push" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="K2r-rR-dpO"/>
                     </connections>
@@ -89,52 +89,36 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="TWv-iM-q9g">
+                            <webView contentMode="scaleToFill" id="Ehn-iW-nfQ">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3001" contentMode="left" text="Title goes here" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" id="HQy-4s-ZsG">
-                                        <rect key="frame" x="6" y="20" width="756" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3003" contentMode="left" text="Date goes here" lineBreakMode="tailTruncation" minimumFontSize="10" id="Ra3-04-Q5H">
-                                        <rect key="frame" x="6" y="0.0" width="756" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3004" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" id="UwJ-3R-lCA">
-                                        <rect key="frame" x="0.0" y="55" width="768" height="361"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fp6-7y-Ao7">
-                                        <rect key="frame" x="685" y="20" width="63" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                        <state key="normal" title="Close">
-                                            <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="2" kind="modal" modalTransitionStyle="flipHorizontal" id="QaB-Lh-t6R"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </scrollView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4rm-Uc-E25" id="mcH-Cq-xc0"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fp6-7y-Ao7">
+                                <rect key="frame" x="685" y="20" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2" kind="modal" modalTransitionStyle="flipHorizontal" id="QaB-Lh-t6R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Pel-X7-g31"/>
+                    <connections>
+                        <outlet property="webView" destination="Ehn-iW-nfQ" id="2q8-n3-tbU"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="953" y="-134"/>
@@ -148,7 +132,7 @@
         <class className="ADN_DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ADN_DetailViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
         <class className="ADN_NewsViewController" superclassName="UIViewController">

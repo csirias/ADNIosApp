@@ -9,13 +9,9 @@
 #import "ADN_DetailViewController.h"
 #import "ADN_NewsViewController.h"
 
-@interface ADN_DetailViewController ()
-- (void)resizeSubviews;
-@end
-
 @implementation ADN_DetailViewController
 
-@synthesize details, scrollView;
+@synthesize webView, url;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,38 +39,17 @@
 }
 */
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    webView.delegate = self;
+    [webView loadRequest:[NSURLRequest requestWithURL:self.url]];
 }
-*/
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:FALSE animated:YES];
-
-    NSString* title = [self.details objectForKey:@"title"];
-    UILabel* titleLabel = (UILabel*)[self.view viewWithTag:kNewsCellTitleTag];
-    [titleLabel setText:title];
-
-    UILabel* dateLabel = (UILabel*)[self.view viewWithTag:kNewsCellDateTag];
-    NSDateFormatter* f = [[NSDateFormatter alloc] init];
-    [f setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
-    [f setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
-        NSLog(@"date = %@", [f dateFromString:[self.details objectForKey:@"date"]]);
-    NSDate* date = [f dateFromString:[self.details objectForKey:@"date"]];
-    NSLog(@"long date format = %@", NSLocalizedString(@"Long Date Format", @""));
-    [f setDateFormat:NSLocalizedString(@"Long Date Format", @"")];
-    //[f setDateFormat:@"h':'mm a' - 'dd/MM/yyyy"];
-    [f setTimeZone:[NSTimeZone localTimeZone]];
-    NSLog(@"f string = %@", [f stringFromDate:date]);
-    dateLabel.text = [f stringFromDate:date];
-
-    savedOffset = CGPointZero;
-
-    [self resizeSubviews];
 }
 
 - (void)viewDidUnload
@@ -89,59 +64,25 @@
     return UIInterfaceOrientationIsLandscape(interfaceOrientation) || interfaceOrientation == UIInterfaceOrientationPortrait;
 }
 
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+
+#pragma mark - WebView Delegate
+
+
+- (void)webViewDidStartLoad:(UIWebView*)webView
 {
-    [self resizeSubviews];
-}
-
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    self.scrollView.contentOffset = CGPointZero;
-}
-
-
-#pragma mark - ScrollView delegate
-
-
-- (void)scrollViewDidScroll:(UIScrollView*)sv
-{
-    savedOffset = sv.contentOffset;
+    NSLog(@"Started loading details");
 }
 
 
-#pragma mark - Resizing subviews
-
-
-- (void)resizeSubviews
+- (void)webViewDidFinishLoad:(UIWebView*)webView
 {
-    UILabel* titleLabel = (UILabel*)[self.view viewWithTag:kNewsCellTitleTag];
-    UILabel* dateLabel = (UILabel*)[self.view viewWithTag:kNewsCellDateTag];
-    UITextView* descTextView = (UITextView*)[self.view viewWithTag:kNewsCellWebviewTag];
-    CGSize totalSize = CGSizeZero;
+    NSLog(@"Stopped loading details");
+}
 
-    totalSize.width = self.view.frame.size.width;
 
-    // Size the title to the proper size.
-    // TODO: Generalize this into a separate method.
-    CGRect frame = [titleLabel frame];
-    CGSize size = [titleLabel.text sizeWithFont:titleLabel.font
-                              constrainedToSize:CGSizeMake(frame.size.width, 9999)
-                                  lineBreakMode:UILineBreakModeWordWrap];
-    frame.size.height = size.height;
-    [titleLabel setFrame:frame];
-    totalSize.height += size.height + dateLabel.frame.size.height;
-    
-    descTextView.text = [self.details objectForKey:@"desc"];
-    frame = [descTextView frame];
-    size = [descTextView.text sizeWithFont:descTextView.font
-                         constrainedToSize:CGSizeMake(frame.size.width, 9999)
-                             lineBreakMode:UILineBreakModeWordWrap];
-    totalSize.height += size.height + 8;
-    frame.size.height = size.height + 8;
-    frame.origin.y = dateLabel.frame.size.height + titleLabel.frame.size.height;
-    [descTextView setFrame:frame];
-    
-    [self.scrollView setContentSize:totalSize];
+- (void)webView:(UIWebView*)webView didFailLoadWithError:(NSError*)error
+{
+    NSLog(@"Got error loading details: %@", error);
 }
 
 @end
