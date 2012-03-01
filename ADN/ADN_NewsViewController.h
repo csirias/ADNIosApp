@@ -23,6 +23,8 @@
     NSArray* details;
     AudioStreamer* streamer;
     EasyTableView* easyTableView[4];
+    NSOperationQueue* downloadQueue;
+    NSMutableData* data;
 }
 
 @property (nonatomic, strong) IBOutlet UITableView* tableView;

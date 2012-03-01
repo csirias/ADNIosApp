@@ -11,7 +11,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="ADN_NewsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="adn_logo.png" id="yrt-Va-XE9">
@@ -75,7 +75,7 @@
                         <outlet property="radioButton" destination="UGU-qP-g5T" id="CBl-wj-OOj"/>
                         <outlet property="radioStatusLabel" destination="WhH-9p-fct" id="yO1-y0-07T"/>
                         <outlet property="tableView" destination="1k7-zo-Uyl" id="XEo-EK-hP7"/>
-                        <segue destination="4rm-Uc-E25" kind="modal" identifier="push" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="K2r-rR-dpO"/>
+                        <segue destination="4rm-Uc-E25" kind="modal" identifier="push" modalPresentationStyle="pageSheet" modalTransitionStyle="crossDissolve" id="K2r-rR-dpO"/>
                     </connections>
                 </viewController>
             </objects>
@@ -86,11 +86,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBW-Cp-iOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="4rm-Uc-E25" customClass="ADN_DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CKc-qQ-aRo">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="Ehn-iW-nfQ">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -109,7 +109,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2" kind="modal" modalTransitionStyle="flipHorizontal" id="QaB-Lh-t6R"/>
+                                    <segue destination="2" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="QaB-Lh-t6R"/>
                                 </connections>
                             </button>
                         </subviews>

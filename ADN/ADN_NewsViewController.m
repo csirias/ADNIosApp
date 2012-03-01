@@ -127,8 +127,16 @@ static BOOL is_ipad()
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    NSString* sections[4] = { NSLocalizedString(@"Actualidad", @""), NSLocalizedString(@"Deportes", @""), NSLocalizedString(@"Nacionales", @""), NSLocalizedString(@"Mundo", @"") };
-    return sections[section];
+    if([self.details count] == 3)
+    {
+        NSString* sections[3] = { NSLocalizedString(@"Actualidad", @""), NSLocalizedString(@"Deportes", @""), NSLocalizedString(@"Noticias", @"") };
+        return sections[section];
+    }
+    else
+    {
+        NSString* sections[4] = { NSLocalizedString(@"Actualidad", @""), NSLocalizedString(@"Deportes", @""), NSLocalizedString(@"Nacionales", @""), NSLocalizedString(@"Mundo", @"") };
+        return sections[section];
+    }
 }
 
 - (UITableViewCell*)tableView:(UITableView*)tv cellForRowAtIndexPath:(NSIndexPath*)indexPath
@@ -352,6 +360,9 @@ static BOOL is_ipad()
     {
         switch([[d objectForKey:@"CategoryTabID"] intValue])
         {
+            case 84:
+                sectionId = 0;
+                break;
             case 81:
                 sectionId = 1;
                 break;
@@ -365,13 +376,11 @@ static BOOL is_ipad()
         ADN_NewsItem* item = [[ADN_NewsItem alloc] initWithDictionary:d];
         [[tmp objectAtIndex:sectionId] addObject: item];
     }
+    
+    if([[tmp objectAtIndex:3] count] == 0)
+        [tmp removeObjectAtIndex:3];
 
     details = [tmp copy];
-    /*
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"actualidad" ofType:@"json"];
-    NSData* data = [NSData dataWithContentsOfFile:filePath];
-    details = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:error];
-     */
 }
 
 - (NSArray*)details
