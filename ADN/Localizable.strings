@@ -1,10 +1,10 @@
 /* 
-  Translations.strings
-  ADN
-
-  Created by Jeremy Tregunna on 12-02-21.
-  Copyright (c) 2012 Jeremy Tregunna. All rights reserved.
-*/
+ Translations.strings
+ ADN
+ 
+ Created by Jeremy Tregunna on 12-02-21.
+ Copyright (c) 2012 Jeremy Tregunna. All rights reserved.
+ */
 
 "MainJSONFeed" = "http://www.adn.fm/ADNMobileWeb/JSONNewsSummary.aspx";
 "AudioURL" = "http://www.fm.net.ve:9000/ADNRADIO";

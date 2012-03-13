@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2177" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Pcd-M4-Jk6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Pcd-M4-Jk6">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
         <!--News View Controller - Noticias-->
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cabina en Vivo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="yXV-9i-dRC">
-                                <rect key="frame" x="156" y="44" width="100" height="22"/>
+                                <rect key="frame" x="130" y="44" width="126" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -96,7 +96,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="delegate" destination="qIq-EI-fya" id="p7g-ZP-x8z"/>
+                                    <outlet property="delegate" destination="qIq-EI-fya" id="XRo-zP-6cR"/>
                                 </connections>
                             </webView>
                         </subviews>
@@ -104,7 +104,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uUg-Tl-kIg"/>
                     <connections>
-                        <outlet property="webView" destination="82i-oa-hsN" id="w3T-gh-EXd"/>
+                        <outlet property="webView" destination="82i-oa-hsN" id="jcv-mj-sBm"/>
                     </connections>
                 </viewController>
             </objects>

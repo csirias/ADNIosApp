@@ -11,12 +11,10 @@
 		4E0A38E114ED7E51009D3245 /* actualidad.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A38E014ED7E51009D3245 /* actualidad.json */; };
 		4E0A38E714ED9E1F009D3245 /* ADN_DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A38E614ED9E1F009D3245 /* ADN_DetailViewController.m */; };
 		4E277A1314F4215F008687F2 /* lauraChinchilla_1_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A1214F4215F008687F2 /* lauraChinchilla_1_thumb.jpg */; };
-		4E277A1914F42FDA008687F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A1B14F42FDA008687F2 /* Localizable.strings */; };
 		4E277A1E14F4310F008687F2 /* audio.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A1D14F4310F008687F2 /* audio.png */; };
 		4E277A4314F548FB008687F2 /* appicon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A4014F548FB008687F2 /* appicon_57.png */; };
 		4E277A4414F548FB008687F2 /* appicon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A4114F548FB008687F2 /* appicon_72.png */; };
 		4E277A4514F548FB008687F2 /* appicon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A4214F548FB008687F2 /* appicon_114.png */; };
-		4E277A4814F54944008687F2 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E277A4614F54944008687F2 /* MainStoryboard_iPad.storyboard */; };
 		4E277A5714F56ABA008687F2 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E277A5614F56AB9008687F2 /* UIDevice+Hardware.m */; };
 		4E277A5A14F56AC2008687F2 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E277A5914F56AC2008687F2 /* AudioStreamer.m */; };
 		4E277A5B14F56B6F008687F2 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E277A5614F56AB9008687F2 /* UIDevice+Hardware.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -38,6 +36,9 @@
 		4E5983AF14F7B82600A370C5 /* LeyAntitabaco2_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E5983AC14F7B82600A370C5 /* LeyAntitabaco2_thumb.jpg */; };
 		4E5983B014F7B82600A370C5 /* RinconVieja2_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E5983AD14F7B82600A370C5 /* RinconVieja2_thumb.jpg */; };
 		4E63C82514F3FA4D00D91596 /* EasyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FCC9B14F2F8880079F043 /* EasyTableView.m */; };
+		4E7DAAB9150ED78200111B37 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DAABA150ED78200111B37 /* MainStoryboard_iPhone.storyboard */; };
+		4E7DAABB150ED7DF00111B37 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DAABC150ED7DF00111B37 /* MainStoryboard_iPad.storyboard */; };
+		4E7DAABD150ED83700111B37 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DAABE150ED83700111B37 /* Localizable.strings */; };
 		4E90FA4014FC063600A8B042 /* ADN_NewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E90FA3F14FC063600A8B042 /* ADN_NewsItem.m */; };
 		4E90FA4914FD09DF00A8B042 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E90FA4814FD09DF00A8B042 /* AsyncImageView.m */; };
 		4E90FA4B14FD0A5A00A8B042 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E90FA4A14FD0A5A00A8B042 /* QuartzCore.framework */; };
@@ -47,7 +48,6 @@
 		4EF9828814ED4FC7003108E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EF9828614ED4FC7003108E1 /* InfoPlist.strings */; };
 		4EF9828A14ED4FC7003108E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF9828914ED4FC7003108E1 /* main.m */; };
 		4EF9828E14ED4FC7003108E1 /* ADN_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF9828D14ED4FC7003108E1 /* ADN_AppDelegate.m */; };
-		4EF9829114ED4FC7003108E1 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF9828F14ED4FC7003108E1 /* MainStoryboard_iPhone.storyboard */; };
 		4EF9829F14ED4FC7003108E1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9829E14ED4FC7003108E1 /* SenTestingKit.framework */; };
 		4EF982A014ED4FC7003108E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9827D14ED4FC7003108E1 /* UIKit.framework */; };
 		4EF982A114ED4FC7003108E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF9827F14ED4FC7003108E1 /* Foundation.framework */; };
@@ -73,13 +73,10 @@
 		4E0A38E514ED9E1F009D3245 /* ADN_DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADN_DetailViewController.h; sourceTree = "<group>"; };
 		4E0A38E614ED9E1F009D3245 /* ADN_DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADN_DetailViewController.m; sourceTree = "<group>"; };
 		4E277A1214F4215F008687F2 /* lauraChinchilla_1_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lauraChinchilla_1_thumb.jpg; sourceTree = "<group>"; };
-		4E277A1A14F42FDA008687F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4E277A1C14F42FEC008687F2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E277A1D14F4310F008687F2 /* audio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio.png; sourceTree = "<group>"; };
 		4E277A4014F548FB008687F2 /* appicon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_57.png; sourceTree = SOURCE_ROOT; };
 		4E277A4114F548FB008687F2 /* appicon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_72.png; sourceTree = SOURCE_ROOT; };
 		4E277A4214F548FB008687F2 /* appicon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_114.png; sourceTree = SOURCE_ROOT; };
-		4E277A4714F54944008687F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		4E277A5514F56AB8008687F2 /* UIDevice+Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Hardware.h"; sourceTree = "<group>"; };
 		4E277A5614F56AB9008687F2 /* UIDevice+Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Hardware.m"; sourceTree = "<group>"; };
 		4E277A5814F56AC1008687F2 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
@@ -102,13 +99,14 @@
 		4E5983AB14F7B82600A370C5 /* Cigarro2_thumb.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cigarro2_thumb.jpeg; sourceTree = "<group>"; };
 		4E5983AC14F7B82600A370C5 /* LeyAntitabaco2_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LeyAntitabaco2_thumb.jpg; sourceTree = "<group>"; };
 		4E5983AD14F7B82600A370C5 /* RinconVieja2_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RinconVieja2_thumb.jpg; sourceTree = "<group>"; };
+		4E7DAABA150ED78200111B37 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		4E7DAABC150ED7DF00111B37 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		4E7DAABE150ED83700111B37 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		4E90FA3E14FC063600A8B042 /* ADN_NewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADN_NewsItem.h; sourceTree = "<group>"; };
 		4E90FA3F14FC063600A8B042 /* ADN_NewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADN_NewsItem.m; sourceTree = "<group>"; };
 		4E90FA4714FD09DF00A8B042 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		4E90FA4814FD09DF00A8B042 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		4E90FA4A14FD0A5A00A8B042 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		4E90FA4C14FD231200A8B042 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		4E90FA4D14FD4D2B00A8B042 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		4EF9827914ED4FC7003108E1 /* ADN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF9827D14ED4FC7003108E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EF9827F14ED4FC7003108E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -119,7 +117,6 @@
 		4EF9828B14ED4FC7003108E1 /* ADN-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ADN-Prefix.pch"; sourceTree = "<group>"; };
 		4EF9828C14ED4FC7003108E1 /* ADN_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADN_AppDelegate.h; sourceTree = "<group>"; };
 		4EF9828D14ED4FC7003108E1 /* ADN_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADN_AppDelegate.m; sourceTree = "<group>"; };
-		4EF9829014ED4FC7003108E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		4EF9829D14ED4FC7003108E1 /* ADNTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF9829E14ED4FC7003108E1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4EF982A614ED4FC7003108E1 /* ADNTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ADNTests-Info.plist"; sourceTree = "<group>"; };
@@ -226,8 +223,8 @@
 				4E0A38DA14ED6655009D3245 /* ADN_NewsViewController.m */,
 				4E0A38E514ED9E1F009D3245 /* ADN_DetailViewController.h */,
 				4E0A38E614ED9E1F009D3245 /* ADN_DetailViewController.m */,
-				4EF9828F14ED4FC7003108E1 /* MainStoryboard_iPhone.storyboard */,
-				4E277A4614F54944008687F2 /* MainStoryboard_iPad.storyboard */,
+				4E7DAABA150ED78200111B37 /* MainStoryboard_iPhone.storyboard */,
+				4E7DAABC150ED7DF00111B37 /* MainStoryboard_iPad.storyboard */,
 				4EF9828414ED4FC7003108E1 /* Supporting Files */,
 			);
 			path = ADN;
@@ -241,7 +238,7 @@
 				4EF9828614ED4FC7003108E1 /* InfoPlist.strings */,
 				4EF9828914ED4FC7003108E1 /* main.m */,
 				4EF9828B14ED4FC7003108E1 /* ADN-Prefix.pch */,
-				4E277A1B14F42FDA008687F2 /* Localizable.strings */,
+				4E7DAABE150ED83700111B37 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -371,16 +368,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EF9828814ED4FC7003108E1 /* InfoPlist.strings in Resources */,
-				4EF9829114ED4FC7003108E1 /* MainStoryboard_iPhone.storyboard in Resources */,
+				4E7DAAB9150ED78200111B37 /* MainStoryboard_iPhone.storyboard in Resources */,
 				4EF982B814ED5CA7003108E1 /* adn_logo.png in Resources */,
 				4E0A38E114ED7E51009D3245 /* actualidad.json in Resources */,
 				4E277A1314F4215F008687F2 /* lauraChinchilla_1_thumb.jpg in Resources */,
-				4E277A1914F42FDA008687F2 /* Localizable.strings in Resources */,
+				4E7DAABD150ED83700111B37 /* Localizable.strings in Resources */,
 				4E277A1E14F4310F008687F2 /* audio.png in Resources */,
 				4E277A4314F548FB008687F2 /* appicon_57.png in Resources */,
 				4E277A4414F548FB008687F2 /* appicon_72.png in Resources */,
 				4E277A4514F548FB008687F2 /* appicon_114.png in Resources */,
-				4E277A4814F54944008687F2 /* MainStoryboard_iPad.storyboard in Resources */,
+				4E7DAABB150ED7DF00111B37 /* MainStoryboard_iPad.storyboard in Resources */,
 				4E277A6914F58E7F008687F2 /* carnavalDesampa2_thumb.JPG in Resources */,
 				4E277A6A14F58E7F008687F2 /* DiputadoAngulo2_thumb.JPG in Resources */,
 				4E277A6B14F58E7F008687F2 /* ex%20mundialistas%20italia%2090_thumb.jpg in Resources */,
@@ -461,24 +458,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4E277A1B14F42FDA008687F2 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E277A1A14F42FDA008687F2 /* en */,
-				4E277A1C14F42FEC008687F2 /* es */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		4E277A4614F54944008687F2 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E277A4714F54944008687F2 /* en */,
-				4E90FA4D14FD4D2B00A8B042 /* es */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		4EF9828614ED4FC7003108E1 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -486,15 +465,6 @@
 				4E4FCC9414F2CEC40079F043 /* es */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		4EF9828F14ED4FC7003108E1 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4EF9829014ED4FC7003108E1 /* en */,
-				4E90FA4C14FD231200A8B042 /* es */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		4EF982A714ED4FC7003108E1 /* InfoPlist.strings */ = {
