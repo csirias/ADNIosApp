@@ -37,6 +37,9 @@
 		4E5983B014F7B82600A370C5 /* RinconVieja2_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E5983AD14F7B82600A370C5 /* RinconVieja2_thumb.jpg */; };
 		4E63C82514F3FA4D00D91596 /* EasyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FCC9B14F2F8880079F043 /* EasyTableView.m */; };
 		4E7BD9D415117E74001E9D89 /* appicon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E7BD9D315117E74001E9D89 /* appicon_144.png */; };
+		4E7BD9D6151180C7001E9D89 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E7BD9D5151180C7001E9D89 /* Default-Portrait~ipad.png */; };
+		4E7BD9D815118106001E9D89 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E7BD9D715118106001E9D89 /* Default-Landscape~ipad.png */; };
+		4E7BD9DA15118275001E9D89 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E7BD9D915118275001E9D89 /* Default.png */; };
 		4E7DAAB9150ED78200111B37 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DAABA150ED78200111B37 /* MainStoryboard_iPhone.storyboard */; };
 		4E7DAABB150ED7DF00111B37 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DAABC150ED7DF00111B37 /* MainStoryboard_iPad.storyboard */; };
 		4E7DAABD150ED83700111B37 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DAABE150ED83700111B37 /* Localizable.strings */; };
@@ -102,6 +105,9 @@
 		4E5983AC14F7B82600A370C5 /* LeyAntitabaco2_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LeyAntitabaco2_thumb.jpg; sourceTree = "<group>"; };
 		4E5983AD14F7B82600A370C5 /* RinconVieja2_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RinconVieja2_thumb.jpg; sourceTree = "<group>"; };
 		4E7BD9D315117E74001E9D89 /* appicon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appicon_144.png; path = ../appicon_144.png; sourceTree = "<group>"; };
+		4E7BD9D5151180C7001E9D89 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		4E7BD9D715118106001E9D89 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		4E7BD9D915118275001E9D89 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4E7DAABA150ED78200111B37 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		4E7DAABC150ED7DF00111B37 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		4E7DAABE150ED83700111B37 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 		4EF9826E14ED4FC7003108E1 = {
 			isa = PBXGroup;
 			children = (
+				4E7BD9D915118275001E9D89 /* Default.png */,
 				4EF9828314ED4FC7003108E1 /* ADN */,
 				4EF982A414ED4FC7003108E1 /* ADNTests */,
 				4EF9827C14ED4FC7003108E1 /* Frameworks */,
@@ -290,6 +297,8 @@
 				4E277A6614F58E7F008687F2 /* GripeAH1N12_thumb.jpg */,
 				4E277A6714F58E7F008687F2 /* Opositores1_thumb.jpg */,
 				4E277A6814F58E7F008687F2 /* OttonSolisGolpe2_thumb.jpg */,
+				4E7BD9D715118106001E9D89 /* Default-Landscape~ipad.png */,
+				4E7BD9D5151180C7001E9D89 /* Default-Portrait~ipad.png */,
 				4E277A4014F548FB008687F2 /* appicon_57.png */,
 				4E277A4114F548FB008687F2 /* appicon_72.png */,
 				4E277A4214F548FB008687F2 /* appicon_114.png */,
@@ -396,6 +405,9 @@
 				4E5983AF14F7B82600A370C5 /* LeyAntitabaco2_thumb.jpg in Resources */,
 				4E5983B014F7B82600A370C5 /* RinconVieja2_thumb.jpg in Resources */,
 				4E7BD9D415117E74001E9D89 /* appicon_144.png in Resources */,
+				4E7BD9D6151180C7001E9D89 /* Default-Portrait~ipad.png in Resources */,
+				4E7BD9D815118106001E9D89 /* Default-Landscape~ipad.png in Resources */,
+				4E7BD9DA15118275001E9D89 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
