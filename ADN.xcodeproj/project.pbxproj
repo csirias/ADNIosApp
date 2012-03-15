@@ -36,6 +36,7 @@
 		4E5983AF14F7B82600A370C5 /* LeyAntitabaco2_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E5983AC14F7B82600A370C5 /* LeyAntitabaco2_thumb.jpg */; };
 		4E5983B014F7B82600A370C5 /* RinconVieja2_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E5983AD14F7B82600A370C5 /* RinconVieja2_thumb.jpg */; };
 		4E63C82514F3FA4D00D91596 /* EasyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FCC9B14F2F8880079F043 /* EasyTableView.m */; };
+		4E7BD9D415117E74001E9D89 /* appicon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E7BD9D315117E74001E9D89 /* appicon_144.png */; };
 		4E7DAAB9150ED78200111B37 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DAABA150ED78200111B37 /* MainStoryboard_iPhone.storyboard */; };
 		4E7DAABB150ED7DF00111B37 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DAABC150ED7DF00111B37 /* MainStoryboard_iPad.storyboard */; };
 		4E7DAABD150ED83700111B37 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E7DAABE150ED83700111B37 /* Localizable.strings */; };
@@ -72,6 +73,7 @@
 		4E0A38E014ED7E51009D3245 /* actualidad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = actualidad.json; sourceTree = "<group>"; };
 		4E0A38E514ED9E1F009D3245 /* ADN_DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADN_DetailViewController.h; sourceTree = "<group>"; };
 		4E0A38E614ED9E1F009D3245 /* ADN_DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADN_DetailViewController.m; sourceTree = "<group>"; };
+		4E16F8FB1511393900778072 /* ADN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ADN.entitlements; sourceTree = "<group>"; };
 		4E277A1214F4215F008687F2 /* lauraChinchilla_1_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lauraChinchilla_1_thumb.jpg; sourceTree = "<group>"; };
 		4E277A1D14F4310F008687F2 /* audio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio.png; sourceTree = "<group>"; };
 		4E277A4014F548FB008687F2 /* appicon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_57.png; sourceTree = SOURCE_ROOT; };
@@ -99,6 +101,7 @@
 		4E5983AB14F7B82600A370C5 /* Cigarro2_thumb.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cigarro2_thumb.jpeg; sourceTree = "<group>"; };
 		4E5983AC14F7B82600A370C5 /* LeyAntitabaco2_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LeyAntitabaco2_thumb.jpg; sourceTree = "<group>"; };
 		4E5983AD14F7B82600A370C5 /* RinconVieja2_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RinconVieja2_thumb.jpg; sourceTree = "<group>"; };
+		4E7BD9D315117E74001E9D89 /* appicon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appicon_144.png; path = ../appicon_144.png; sourceTree = "<group>"; };
 		4E7DAABA150ED78200111B37 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		4E7DAABC150ED7DF00111B37 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		4E7DAABE150ED83700111B37 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -239,6 +242,7 @@
 				4EF9828914ED4FC7003108E1 /* main.m */,
 				4EF9828B14ED4FC7003108E1 /* ADN-Prefix.pch */,
 				4E7DAABE150ED83700111B37 /* Localizable.strings */,
+				4E16F8FB1511393900778072 /* ADN.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -289,6 +293,7 @@
 				4E277A4014F548FB008687F2 /* appicon_57.png */,
 				4E277A4114F548FB008687F2 /* appicon_72.png */,
 				4E277A4214F548FB008687F2 /* appicon_114.png */,
+				4E7BD9D315117E74001E9D89 /* appicon_144.png */,
 				4E277A1D14F4310F008687F2 /* audio.png */,
 				4E277A1214F4215F008687F2 /* lauraChinchilla_1_thumb.jpg */,
 				4EF982B714ED5CA7003108E1 /* adn_logo.png */,
@@ -390,6 +395,7 @@
 				4E5983AE14F7B82600A370C5 /* Cigarro2_thumb.jpeg in Resources */,
 				4E5983AF14F7B82600A370C5 /* LeyAntitabaco2_thumb.jpg in Resources */,
 				4E5983B014F7B82600A370C5 /* RinconVieja2_thumb.jpg in Resources */,
+				4E7BD9D415117E74001E9D89 /* appicon_144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +484,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4E16F8FC1511399C00778072 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Ad Hoc";
+		};
+		4E16F8FD1511399C00778072 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ADN/ADN.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ADN/ADN-Prefix.pch";
+				INFOPLIST_FILE = "ADN/ADN-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad Hoc";
+		};
+		4E16F8FE1511399C00778072 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ADN.app/ADN";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ADN/ADN-Prefix.pch";
+				INFOPLIST_FILE = "ADNTests/ADNTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = "Ad Hoc";
+		};
 		4EF982AD14ED4FC7003108E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -528,6 +586,7 @@
 		4EF982B014ED4FC7003108E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ADN/ADN.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ADN/ADN-Prefix.pch";
 				INFOPLIST_FILE = "ADN/ADN-Info.plist";
@@ -539,6 +598,7 @@
 		4EF982B114ED4FC7003108E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ADN/ADN.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ADN/ADN-Prefix.pch";
 				INFOPLIST_FILE = "ADN/ADN-Info.plist";
@@ -589,6 +649,7 @@
 			buildConfigurations = (
 				4EF982AD14ED4FC7003108E1 /* Debug */,
 				4EF982AE14ED4FC7003108E1 /* Release */,
+				4E16F8FC1511399C00778072 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -598,6 +659,7 @@
 			buildConfigurations = (
 				4EF982B014ED4FC7003108E1 /* Debug */,
 				4EF982B114ED4FC7003108E1 /* Release */,
+				4E16F8FD1511399C00778072 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -607,6 +669,7 @@
 			buildConfigurations = (
 				4EF982B314ED4FC7003108E1 /* Debug */,
 				4EF982B414ED4FC7003108E1 /* Release */,
+				4E16F8FE1511399C00778072 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

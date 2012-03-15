@@ -13,6 +13,7 @@
 		<string>appicon_57.png</string>
 		<string>appicon_114.png</string>
 		<string>appicon_72.png</string>
+		<string>appicon_144.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -23,6 +24,7 @@
 				<string>appicon_57.png</string>
 				<string>appicon_114.png</string>
 				<string>appicon_72.png</string>
+				<string>appicon_144.png</string>
 			</array>
 		</dict>
 	</dict>
@@ -39,7 +41,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIBackgroundModes</key>
