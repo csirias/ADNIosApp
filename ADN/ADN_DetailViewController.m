@@ -70,19 +70,19 @@
 
 - (void)webViewDidStartLoad:(UIWebView*)webView
 {
-    NSLog(@"Started loading details");
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 }
 
 
 - (void)webViewDidFinishLoad:(UIWebView*)webView
 {
-    NSLog(@"Stopped loading details");
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
 
 - (void)webView:(UIWebView*)webView didFailLoadWithError:(NSError*)error
 {
-    NSLog(@"Got error loading details: %@", error);
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
 @end

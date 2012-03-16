@@ -366,6 +366,7 @@ static BOOL is_ipad()
 
 - (void)loadJSON:(NSError**)error
 {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     NSData* returnedData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:NSLocalizedString(@"MainJSONFeed", @"")]];
     NSArray* array = [NSJSONSerialization JSONObjectWithData:returnedData options:kNilOptions error:error];
     NSMutableArray* tmp = [NSMutableArray arrayWithObjects:[NSMutableArray array], [NSMutableArray array], [NSMutableArray array], [NSMutableArray array], nil];
@@ -396,6 +397,7 @@ static BOOL is_ipad()
         [tmp removeObjectAtIndex:3];
 
     details = [tmp copy];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
 - (NSArray*)details
