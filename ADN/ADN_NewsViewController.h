@@ -33,5 +33,6 @@
 @property (nonatomic, strong) IBOutlet UIButton* radioButton;
 
 - (IBAction)startListening:(id)sender;
+- (IBAction)termsOfService:(id)sender;
 
 @end

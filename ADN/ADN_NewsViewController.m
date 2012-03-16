@@ -238,11 +238,20 @@ static BOOL is_ipad()
 }
 
 
+#pragma mark - Buttons
+
+
+- (IBAction)termsOfService:(id)sender
+{
+    [self performSegueWithIdentifier:@"terms" sender:self];
+}
+
+
 #pragma mark - Segues
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
 {
-    if(selectedColumn != INT_MAX)
+    if(selectedColumn != INT_MAX && [segue.identifier isEqualToString:@"push"])
     {
         ADN_NewsItem* d = [selectedData objectAtIndex:selectedColumn];
         selectedColumn = INT_MAX;
@@ -250,6 +259,12 @@ static BOOL is_ipad()
         [[detailVC navigationItem] setTitle:d.title];
         detailVC.url = d.detailURL;
         NSLog(@"Loading webview with URL %@", d.detailURL);
+    }
+    else if([segue.identifier isEqualToString:@"terms"])
+    {
+        ADN_DetailViewController* detailVC = [segue destinationViewController];
+        [[detailVC navigationItem] setTitle:NSLocalizedString(@"Terms of Service Label", @"")];
+        detailVC.url = [NSURL URLWithString:NSLocalizedString(@"Terms of Service Link", @"")];
     }
 }
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Pcd-M4-Jk6">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
@@ -15,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="115" sectionHeaderHeight="22" sectionFooterHeight="22" id="yby-9r-Pbm">
-                                <rect key="frame" x="0.0" y="80" width="320" height="336"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="299"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -67,6 +68,21 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DjO-Gb-zcz">
+                                <rect key="frame" x="20" y="379" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <state key="normal" title="Acuerdo de Servicio">
+                                    <color key="titleColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="termsOfService:" destination="3E4-AI-0Eb" eventType="touchUpInside" id="Azr-aY-FSS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -77,10 +93,11 @@
                         <outlet property="radioStatusLabel" destination="yXV-9i-dRC" id="dMe-iH-6AU"/>
                         <outlet property="tableView" destination="yby-9r-Pbm" id="ykp-Qr-1HQ"/>
                         <segue destination="qIq-EI-fya" kind="push" identifier="push" id="FvM-2V-OGT"/>
+                        <segue destination="qIq-EI-fya" kind="push" identifier="terms" id="fGC-sY-VkB"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="853" y="86"/>
+            <point key="canvasLocation" x="821" y="86"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="BG6-21-mfu">
@@ -142,6 +159,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ADN_NewsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="startListening:"/>
+                <relationship kind="action" name="termsOfService:"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="radioButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="radioStatusLabel" candidateClass="UILabel"/>
@@ -154,4 +172,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="fGC-sY-VkB"/>
+    </inferredMetricsTieBreakers>
 </document>
