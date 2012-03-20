@@ -13,4 +13,6 @@
 @property (nonatomic, strong) NSURL* url;
 @property (nonatomic, strong) IBOutlet UIWebView* webView;
 
+- (IBAction)closeDetail:(id)sender;
+
 @end

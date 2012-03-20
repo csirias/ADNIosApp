@@ -126,6 +126,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="closeDetail:" destination="4rm-Uc-E25" eventType="touchUpInside" id="eN7-hM-Jjs"/>
                                     <segue destination="2" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="QaB-Lh-t6R"/>
                                 </connections>
                             </button>
@@ -149,6 +150,7 @@
         <class className="ADN_DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ADN_DetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="closeDetail:"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
