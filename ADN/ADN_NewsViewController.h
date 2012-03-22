@@ -25,12 +25,14 @@
     EasyTableView* easyTableView[4];
     NSOperationQueue* downloadQueue;
     NSMutableData* data;
+    NSDate* lastUpdatedAt;
 }
 
 @property (nonatomic, strong) IBOutlet UITableView* tableView;
 @property (nonatomic, strong) IBOutlet UILabel* dateLabel;
 @property (nonatomic, strong) IBOutlet UILabel* radioStatusLabel;
 @property (nonatomic, strong) IBOutlet UIButton* radioButton;
+@property (nonatomic, strong) IBOutlet UILabel* lastUpdatedLabel;
 
 - (IBAction)startListening:(id)sender;
 - (IBAction)termsOfService:(id)sender;

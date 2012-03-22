@@ -33,7 +33,7 @@ static BOOL is_ipad()
     BOOL       radioPlaying;
 }
 
-@synthesize tableView, dateLabel, radioStatusLabel, radioButton;
+@synthesize tableView, dateLabel, radioStatusLabel, radioButton, lastUpdatedLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -420,6 +420,12 @@ static BOOL is_ipad()
 
     details = [tmp copy];
     [self performSelectorOnMainThread:@selector(deactivateNetworkActivityIndicator) withObject:nil waitUntilDone:YES];
+    
+    NSDateFormatter* f = [[NSDateFormatter alloc] init];
+    NSDate* date = [NSDate date];
+    NSString* dateFormat = @"h':'mm a";
+    [f setDateFormat:dateFormat];
+    self.lastUpdatedLabel.text = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Last Updated", @""), [f stringFromDate:date]];
 }
 
 - (NSArray*)details

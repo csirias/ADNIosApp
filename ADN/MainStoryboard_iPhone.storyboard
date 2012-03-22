@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="115" sectionHeaderHeight="22" sectionFooterHeight="22" id="yby-9r-Pbm">
-                                <rect key="frame" x="0.0" y="80" width="320" height="299"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="281"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -98,12 +98,20 @@
                                     <action selector="reloadMenu:" destination="3E4-AI-0Eb" eventType="touchUpInside" id="zae-Nj-ZeZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ultima Actualización: Ahora" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="0Rj-5o-iJa">
+                                <rect key="frame" x="20" y="362" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hu2-Lr-7jC"/>
                     <connections>
                         <outlet property="dateLabel" destination="UcL-4F-zp6" id="DNz-oQ-cLh"/>
+                        <outlet property="lastUpdatedLabel" destination="0Rj-5o-iJa" id="pui-Rq-4ws"/>
                         <outlet property="radioButton" destination="PQw-O6-IlT" id="HSk-3t-pnS"/>
                         <outlet property="radioStatusLabel" destination="yXV-9i-dRC" id="dMe-iH-6AU"/>
                         <outlet property="tableView" destination="yby-9r-Pbm" id="ykp-Qr-1HQ"/>
@@ -179,6 +187,7 @@
                 <relationship kind="action" name="startListening:"/>
                 <relationship kind="action" name="termsOfService:"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lastUpdatedLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="radioButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="radioStatusLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>

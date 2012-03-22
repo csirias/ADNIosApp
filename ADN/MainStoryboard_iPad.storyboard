@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1k7-zo-Uyl">
-                                <rect key="frame" x="0.0" y="110" width="768" height="857"/>
+                                <rect key="frame" x="0.0" y="110" width="768" height="836"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -85,7 +85,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OQ9-Bi-EZC">
                                 <rect key="frame" x="716" y="967" width="52" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="refresh.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -98,11 +98,19 @@
                                     <action selector="reloadMenu:" destination="2" eventType="touchUpInside" id="s3u-kl-kkN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ultima Actualización: Ahora" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="AEi-AA-HUa">
+                                <rect key="frame" x="0.0" y="954" width="768" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="lGC-D9-OkC" id="Vu7-tM-vFk"/>
+                        <outlet property="lastUpdatedLabel" destination="AEi-AA-HUa" id="KPy-cO-0oc"/>
                         <outlet property="radioButton" destination="UGU-qP-g5T" id="CBl-wj-OOj"/>
                         <outlet property="radioStatusLabel" destination="WhH-9p-fct" id="yO1-y0-07T"/>
                         <outlet property="tableView" destination="1k7-zo-Uyl" id="XEo-EK-hP7"/>
@@ -177,6 +185,7 @@
                 <relationship kind="action" name="startListening:"/>
                 <relationship kind="action" name="termsOfService:"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lastUpdatedLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="radioButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="radioStatusLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
