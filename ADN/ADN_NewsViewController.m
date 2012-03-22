@@ -11,6 +11,7 @@
 #import "EasyTableView.h"
 #import "AsyncImageView.h"
 #import "ADN_NewsItem.h"
+#import "RoundedActivityIndicator.h"
 
 static NSUInteger kADNTableViewHeight = 70;
 static NSUInteger kADNTableCellWidth  = 100;
@@ -376,6 +377,7 @@ static BOOL is_ipad()
 
 - (void)reloadMenu:(id)sender
 {
+    [[RoundedActivityIndicator currentIndicator] displayActivity:@"Reloading"];
     [self refreshMenu];
     [self.tableView reloadData];
 }
@@ -426,6 +428,8 @@ static BOOL is_ipad()
     NSString* dateFormat = @"h':'mm a";
     [f setDateFormat:dateFormat];
     self.lastUpdatedLabel.text = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Last Updated", @""), [f stringFromDate:date]];
+    
+    [[RoundedActivityIndicator currentIndicator] hide];
 }
 
 - (NSArray*)details
