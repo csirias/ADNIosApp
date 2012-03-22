@@ -34,5 +34,6 @@
 
 - (IBAction)startListening:(id)sender;
 - (IBAction)termsOfService:(id)sender;
+- (IBAction)reloadMenu:(id)sender;
 
 @end

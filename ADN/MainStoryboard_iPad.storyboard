@@ -69,7 +69,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zQ2-dI-00d">
-                                <rect key="frame" x="20" y="967" width="728" height="37"/>
+                                <rect key="frame" x="60" y="967" width="648" height="37"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Acuerdo de Servicio">
@@ -81,6 +81,21 @@
                                 </state>
                                 <connections>
                                     <action selector="termsOfService:" destination="2" eventType="touchUpInside" id="sxB-qS-SFv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OQ9-Bi-EZC">
+                                <rect key="frame" x="716" y="967" width="52" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="refresh.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reloadMenu:" destination="2" eventType="touchUpInside" id="s3u-kl-kkN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -145,6 +160,7 @@
     <resources>
         <image name="adn_logo.png" width="197" height="101"/>
         <image name="audio.png" width="36" height="36"/>
+        <image name="refresh.png" width="24" height="26"/>
     </resources>
     <classes>
         <class className="ADN_DetailViewController" superclassName="UIViewController">
@@ -157,6 +173,7 @@
         <class className="ADN_NewsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ADN_NewsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="reloadMenu:"/>
                 <relationship kind="action" name="startListening:"/>
                 <relationship kind="action" name="termsOfService:"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>

@@ -364,9 +364,31 @@ static BOOL is_ipad()
 
 #pragma mark -    REFACTOR THIS INTO ITS OWN MODEL
 
-- (void)loadJSON:(NSError**)error
+- (void)activateNetworkActivityIndicator
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+}
+
+- (void)deactivateNetworkActivityIndicator
+{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+- (void)reloadMenu:(id)sender
+{
+    [self refreshMenu];
+    [self.tableView reloadData];
+}
+
+- (void)refreshMenu
+{
+    [self performSelectorInBackground:@selector(loadJSON:) withObject:nil];
+}
+
+- (void)loadJSON:(NSError**)error
+{
+    //[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:self];
+    [self performSelectorOnMainThread:@selector(activateNetworkActivityIndicator) withObject:nil waitUntilDone:YES];
     NSData* returnedData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:NSLocalizedString(@"MainJSONFeed", @"")]];
     NSArray* array = [NSJSONSerialization JSONObjectWithData:returnedData options:kNilOptions error:error];
     NSMutableArray* tmp = [NSMutableArray arrayWithObjects:[NSMutableArray array], [NSMutableArray array], [NSMutableArray array], [NSMutableArray array], nil];
@@ -397,7 +419,7 @@ static BOOL is_ipad()
         [tmp removeObjectAtIndex:3];
 
     details = [tmp copy];
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    [self performSelectorOnMainThread:@selector(deactivateNetworkActivityIndicator) withObject:nil waitUntilDone:YES];
 }
 
 - (NSArray*)details
